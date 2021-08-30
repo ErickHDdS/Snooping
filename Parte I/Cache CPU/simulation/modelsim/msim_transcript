@@ -20,17 +20,10 @@
 vsim work.MaquinaEstadoCPU
 # vsim work.MaquinaEstadoCPU 
 # Loading work.MaquinaEstadoCPU
-wave create -driver freeze -pattern clock -initialvalue HiZ -period 50ps -dutycycle 50 -starttime 0ps -endtime 10000ps sim:/MaquinaEstadoCPU/clock
-wave create -driver freeze -pattern counter -startvalue 00 -endvalue 11 -type Range -direction Up -period 50ps -step 1 -repeat forever -range 1 0 -starttime 0ps -endtime 10000ps sim:/MaquinaEstadoCPU/MSI
-add wave -position end  sim:/MaquinaEstadoCPU/newState
-add wave -position end  sim:/MaquinaEstadoCPU/state
-add wave -position end  sim:/MaquinaEstadoCPU/invalid
-add wave -position end  sim:/MaquinaEstadoCPU/exclusive
-add wave -position end  sim:/MaquinaEstadoCPU/shared
-add wave -position end  sim:/MaquinaEstadoCPU/read_miss
-add wave -position end  sim:/MaquinaEstadoCPU/write_miss
-add wave -position end  sim:/MaquinaEstadoCPU/read_hit
-add wave -position end  sim:/MaquinaEstadoCPU/write_hit
+do {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/simulation/modelsim/MaquinaEstadoCPU.do}
+# .main_pane.wave.interior.cs.body.pw.wf
+# 1
+# 1
 run
 # CPU write | Place write miss on bus
 # CPU read hit
@@ -40,26 +33,3 @@ run
 run
 # CPU write miss | Place write miss on bus
 # CPU read hit
-run
-# CPU write hit
-# CPU read miss | Write-back block | Place read miss on bus
-run
-# CPU write miss | Place write miss on bus
-# CPU read hit
-run
-# CPU write hit
-# CPU read miss | Write-back block | Place read miss on bus
-run
-# CPU write miss | Place write miss on bus
-# CPU read hit
-run
-# CPU write hit
-# CPU read miss | Write-back block | Place read miss on bus
-run
-# CPU write miss | Place write miss on bus
-# CPU read hit
-run
-# CPU write hit
-# CPU read miss | Write-back block | Place read miss on bus
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/simulation/modelsim/MaquinaEstadoCPU.do}
-wave editwrite -file {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/simulation/modelsim/MaquinaEstadoCPU.do} -append

@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v
+source_file = 1, C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/db/MaquinaEstadoBUS.cbx.xml
+design_name = MaquinaEstadoBUS
+instance = comp, \newState[0]~I , newState[0], MaquinaEstadoBUS, 1
+instance = comp, \newState[1]~I , newState[1], MaquinaEstadoBUS, 1
+instance = comp, \clock~I , clock, MaquinaEstadoBUS, 1
+instance = comp, \MSI[0]~I , MSI[0], MaquinaEstadoBUS, 1
+instance = comp, \MSI[1]~I , MSI[1], MaquinaEstadoBUS, 1

@@ -1,0 +1,18 @@
+|MaquinaEstadoBUS
+clock => newState[0]~reg0.CLK
+clock => newState[1]~reg0.CLK
+clock => state~2.DATAIN
+newState[0] <= newState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+newState[1] <= newState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+MSI[0] => Equal0.IN3
+MSI[0] => Equal1.IN3
+MSI[0] => Mux0.IN4
+MSI[0] => Mux1.IN4
+MSI[0] => Decoder0.IN1
+MSI[1] => Equal0.IN2
+MSI[1] => Equal1.IN2
+MSI[1] => Mux0.IN3
+MSI[1] => Mux1.IN3
+MSI[1] => Decoder0.IN0
+
+
