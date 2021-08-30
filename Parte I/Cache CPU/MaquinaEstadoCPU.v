@@ -36,6 +36,7 @@ module MaquinaEstadoCPU(clock, newState, MSI);
 							$display("CPU write | Place write miss on bus");
 						end
 				endcase
+				
 			exclusive: 
 				case(MSI)
 					write_hit: 
@@ -63,6 +64,7 @@ module MaquinaEstadoCPU(clock, newState, MSI);
 							$display("CPU read miss | Write-back block | Place read miss on bus");
 						end
 				endcase
+				
 			shared: 
 				case(MSI)
 					read_hit: 

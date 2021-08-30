@@ -5,11 +5,11 @@ cModel Technology
 Z0 dC:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache CPU\simulation\modelsim
 vMaquinaEstadoCPU
 !i10b 1
-!s100 <e@6hc1482O2C^TiL=fJ_0
-I^aD6dN@UdIldoB=]OiA>>0
+!s100 j107TV^8[9PP=TQ<c:8e03
+Iid6QD7gGfK@kQFHGR@kD^3
 VN2NQ>JQ9F`8;oGgiHSb_k0
 Z1 dC:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache CPU\simulation\modelsim
-w1630332782
+w1630333864
 8C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v
 FC:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v
 L0 1
@@ -17,7 +17,7 @@ OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1630332791.660000
+!s108 1630333879.071000
 !s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v|
 !s101 -O0
