@@ -1,0 +1,6 @@
+
+State Machine - |MaquinaEstadoCPU|state
+Name state.00 state.shared state.exclusive 
+state.00 0 0 0 
+state.exclusive 1 0 1 
+state.shared 1 1 0 

@@ -1,0 +1,43 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do MaquinaEstadoCPU_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ IV/Snooping/Parte\ I/Cache\ CPU {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MaquinaEstadoCPU
+# 
+# Top level modules:
+# 	MaquinaEstadoCPU
+# 
+vsim work.MaquinaEstadoCPU
+# vsim work.MaquinaEstadoCPU 
+# Loading work.MaquinaEstadoCPU
+wave create -driver freeze -pattern clock -initialvalue HiZ -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/MaquinaEstadoCPU/clock
+wave create -driver freeze -pattern counter -startvalue 00 -endvalue 11 -type Range -direction Up -period 50ps -step 1 -repeat forever -range 1 0 -starttime 0ps -endtime 1000ps sim:/MaquinaEstadoCPU/MSI
+add wave -position end  sim:/MaquinaEstadoCPU/newState
+add wave -position end  sim:/MaquinaEstadoCPU/state
+add wave -position end  sim:/MaquinaEstadoCPU/invalid
+add wave -position end  sim:/MaquinaEstadoCPU/exclusive
+add wave -position end  sim:/MaquinaEstadoCPU/shared
+add wave -position end  sim:/MaquinaEstadoCPU/read_miss
+add wave -position end  sim:/MaquinaEstadoCPU/write_miss
+add wave -position end  sim:/MaquinaEstadoCPU/read_hit
+add wave -position end  sim:/MaquinaEstadoCPU/write_hit
+run
+# CPU read| Place read miss on bus
+run
+# CPU read miss| Place read miss on bus
+run
+# CPU read hit
+run
+# CPU read miss| Place read miss on bus
+run
+# CPU read hit

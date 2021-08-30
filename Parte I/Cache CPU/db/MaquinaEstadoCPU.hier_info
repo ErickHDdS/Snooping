@@ -1,0 +1,12 @@
+|MaquinaEstadoCPU
+clock => newState[0]~reg0.CLK
+clock => newState[1]~reg0.CLK
+clock => state~1.DATAIN
+newState[0] <= newState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+newState[1] <= newState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+MSI[0] => Decoder0.IN1
+MSI[0] => Selector3.IN1
+MSI[1] => Decoder0.IN0
+MSI[1] => Selector2.IN1
+
+
