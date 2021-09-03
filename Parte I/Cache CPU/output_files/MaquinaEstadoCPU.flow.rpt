@@ -1,5 +1,5 @@
 Flow report for MaquinaEstadoCPU
-Mon Aug 30 11:31:07 2021
+Fri Sep 03 15:58:58 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Aug 30 11:31:07 2021           ;
+; Flow Status                        ; Successful - Fri Sep 03 15:58:58 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MaquinaEstadoCPU                                ;
 ; Top-level Entity Name              ; MaquinaEstadoCPU                                ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/30/2021 11:31:06 ;
+; Start date & time ; 09/03/2021 15:58:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MaquinaEstadoCPU    ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 49410866753504.163033386622424 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 49410866753504.163069553701184 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                    ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)      ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                             ; --            ; --          ; --             ;

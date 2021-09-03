@@ -13,7 +13,17 @@ module MaquinaEstadoBUS(clock, newState, MSI);
 	localparam write_miss  = 2'b01;
 	localparam invalidate  = 2'b10;
 	
-	reg [1:0] state;
+	// Mensagens do processador
+	localparam ReadMissForThisBlock     = 2'b00;
+	localparam CPUReadMiss   				= 2'b01;
+	localparam WriteMissForThisBlock    = 2'b10;
+	localparam InvalidateForThisBlock   = 2'b11;
+	
+	// Acoes do processador
+	localparam WriteBackBlock_AbortMemoryAccess  = 1'b0;
+	localparam EmptyAction								= 1'b1;
+	
+	reg [1:0] state, mensage, action;
 	
 	initial
     state <= 2'b01;
@@ -26,12 +36,16 @@ module MaquinaEstadoBUS(clock, newState, MSI);
 						begin
 							state <= invalid;
 							newState <= 1;
+							mensage <= WriteMissForThisBlock;
+							action <= WriteBackBlock_AbortMemoryAccess;
 							$display("Write-back block; abort memory access");
 						end
 					read_miss:
 						begin
 							state <= shared;
 							newState <= 1;
+							mensage <= ReadMissForThisBlock;
+							action <= WriteBackBlock_AbortMemoryAccess;
 							$display("Write-back block; abort memory access");
 						end
 				endcase
@@ -42,18 +56,24 @@ module MaquinaEstadoBUS(clock, newState, MSI);
 						begin
 							state <= invalid;
 							newState <= 0;
+							mensage <= WriteMissForThisBlock;
+							action <= EmptyAction;
 							$display("Write miss for this block");
 						end
 					read_miss:
 						begin
 							state <= shared;
 							newState <= 0;
+							mensage <= CPUReadMiss;
+							action <= EmptyAction;
 							$display("CPU read miss");
 						end
 					invalidate:
 						begin
 							state <= invalid;
 							newState <= 0;
+							mensage <= InvalidateForThisBlock;
+							action <= EmptyAction;
 							$display("Invalidate for this block");
 						end
 				endcase	

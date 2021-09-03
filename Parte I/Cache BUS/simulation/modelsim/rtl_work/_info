@@ -2,25 +2,25 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache BUS\simulation\modelsim
+Z0 dC:\Users\erick\Downloads\Snooping\Parte I\Cache BUS\simulation\modelsim
 vMaquinaEstadoBUS
 !i10b 1
-!s100 eI`FeKgPeK0Zo4Q@eN<eQ2
-IV]Lf9SRVB?3?>^dZHQQ]F0
+!s100 geKMDMfzSk4T9l0n<[SZb2
+I]Kgo3nKJ`YWYWQ^O[5H_F0
 V0<>VHGm4XmU<mdLTUBYMY3
-Z1 dC:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache BUS\simulation\modelsim
-w1630335722
-8C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v
-FC:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v
+Z1 dC:\Users\erick\Downloads\Snooping\Parte I\Cache BUS\simulation\modelsim
+w1630694552
+8C:/Users/erick/Downloads/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v
+FC:/Users/erick/Downloads/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v
 L0 1
 OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1630335740.769000
-!s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v|
+!s108 1630695297.832000
+!s107 C:/Users/erick/Downloads/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/Downloads/Snooping/Parte I/Cache BUS|C:/Users/erick/Downloads/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v|
 !s101 -O0
 o-vlog01compat -work work -O0
-!s92 -vlog01compat -work work {+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS} -O0
+!s92 -vlog01compat -work work {+incdir+C:/Users/erick/Downloads/Snooping/Parte I/Cache BUS} -O0
 n@maquina@estado@b@u@s

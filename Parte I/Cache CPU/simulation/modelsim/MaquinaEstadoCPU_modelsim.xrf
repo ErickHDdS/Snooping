@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/erick/Downloads/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v
+source_file = 1, C:/Users/erick/Downloads/Snooping/Parte I/Cache CPU/db/MaquinaEstadoCPU.cbx.xml
+design_name = MaquinaEstadoCPU
+instance = comp, \clock~I , clock, MaquinaEstadoCPU, 1
+instance = comp, \clock~clkctrl , clock~clkctrl, MaquinaEstadoCPU, 1
+instance = comp, \MSI[0]~I , MSI[0], MaquinaEstadoCPU, 1
+instance = comp, \newState[0]~reg0feeder , newState[0]~reg0feeder, MaquinaEstadoCPU, 1
+instance = comp, \newState[0]~reg0 , newState[0]~reg0, MaquinaEstadoCPU, 1
+instance = comp, \MSI[1]~I , MSI[1], MaquinaEstadoCPU, 1
+instance = comp, \state.00~feeder , state.00~feeder, MaquinaEstadoCPU, 1
+instance = comp, \state.00 , state.00, MaquinaEstadoCPU, 1
+instance = comp, \Selector2~0 , Selector2~0, MaquinaEstadoCPU, 1
+instance = comp, \newState[1]~reg0 , newState[1]~reg0, MaquinaEstadoCPU, 1
+instance = comp, \newState[0]~I , newState[0], MaquinaEstadoCPU, 1
+instance = comp, \newState[1]~I , newState[1], MaquinaEstadoCPU, 1

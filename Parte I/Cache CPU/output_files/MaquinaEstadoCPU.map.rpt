@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MaquinaEstadoCPU
-Mon Aug 30 11:31:07 2021
+Fri Sep 03 15:58:58 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,7 +44,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Aug 30 11:31:07 2021           ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 03 15:58:58 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MaquinaEstadoCPU                                ;
 ; Top-level Entity Name              ; MaquinaEstadoCPU                                ;
@@ -157,13 +157,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                          ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                            ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
-; MaquinaEstadoCPU.v               ; yes             ; User Verilog HDL File  ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+; MaquinaEstadoCPU.v               ; yes             ; User Verilog HDL File  ; C:/Users/erick/Downloads/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -268,12 +268,14 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Aug 30 11:31:06 2021
+    Info: Processing started: Fri Sep 03 15:58:57 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MaquinaEstadoCPU -c MaquinaEstadoCPU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file maquinaestadocpu.v
     Info (12023): Found entity 1: MaquinaEstadoCPU
 Info (12127): Elaborating entity "MaquinaEstadoCPU" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at MaquinaEstadoCPU.v(28): object "mensage" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MaquinaEstadoCPU.v(28): object "action" assigned a value but never read
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -281,9 +283,9 @@ Info (21057): Implemented 8 device resources after synthesis - the final resourc
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 3 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4594 megabytes
-    Info: Processing ended: Mon Aug 30 11:31:07 2021
+    Info: Processing ended: Fri Sep 03 15:58:58 2021
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

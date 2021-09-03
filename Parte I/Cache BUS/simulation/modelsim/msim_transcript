@@ -10,7 +10,7 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ IV/Snooping/Parte\ I/Cache\ BUS {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/erick/Downloads/Snooping/Parte\ I/Cache\ BUS {C:/Users/erick/Downloads/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module MaquinaEstadoBUS
 # 
@@ -20,42 +20,51 @@
 vsim work.MaquinaEstadoBUS
 # vsim work.MaquinaEstadoBUS 
 # Loading work.MaquinaEstadoBUS
-wave create -driver freeze -pattern clock -initialvalue HiZ -period 25ps -dutycycle 50 -starttime 0ps -endtime 10000ps sim:/MaquinaEstadoBUS/clock
-wave create -driver freeze -pattern counter -startvalue 00 -endvalue 10 -type Range -direction Up -period 50ps -step 1 -repeat forever -range 1 0 -starttime 0ps -endtime 10000ps sim:/MaquinaEstadoBUS/MSI
-add wave -position end  sim:/MaquinaEstadoBUS/newState
-add wave -position end  sim:/MaquinaEstadoBUS/state
-add wave -position end  sim:/MaquinaEstadoBUS/invalid
-add wave -position end  sim:/MaquinaEstadoBUS/exclusive
-add wave -position end  sim:/MaquinaEstadoBUS/shared
-add wave -position end  sim:/MaquinaEstadoBUS/read_miss
-add wave -position end  sim:/MaquinaEstadoBUS/write_miss
-add wave -position end  sim:/MaquinaEstadoBUS/invalidate
+do {C:/Users/erick/Downloads/Snooping/Parte I/Cache BUS/simulation/modelsim/MaquinaEstadoBUS.do}
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Error: /MaquinaEstadoBUS/clock already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\Downloads\Snooping\Parte I\Cache BUS\simulation\modelsim\MaquinaEstadoBUS.do line 35
+# ** Error: /MaquinaEstadoBUS/MSI already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\Downloads\Snooping\Parte I\Cache BUS\simulation\modelsim\MaquinaEstadoBUS.do line 36
+# ** Error: /MaquinaEstadoBUS/MSI already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\Downloads\Snooping\Parte I\Cache BUS\simulation\modelsim\MaquinaEstadoBUS.do line 37
+# 1
+# 1
 run
 # Write-back block; abort memory access
 # Write miss for this block
 run
 run
-wave create -driver freeze -pattern clock -initialvalue St1 -period 50ps -dutycycle 50 -starttime 0ps -endtime 10000ps sim:/MaquinaEstadoBUS/clock
+run
+run
+run
+add wave -position 9  sim:/MaquinaEstadoBUS/mensage
+add wave -position 10  sim:/MaquinaEstadoBUS/ReadMissForThisBlock
+add wave -position 11  sim:/MaquinaEstadoBUS/CPUReadMiss
+add wave -position 12  sim:/MaquinaEstadoBUS/WriteMissForThisBlock
+add wave -position 13  sim:/MaquinaEstadoBUS/InvalidateForThisBlock
+add wave -position 15  sim:/MaquinaEstadoBUS/action
+add wave -position 16  sim:/MaquinaEstadoBUS/WriteBackBlock_AbortMemoryAccess
+add wave -position 17  sim:/MaquinaEstadoBUS/EmptyAction
 add wave -position 0 -format Logic -height 17 -editable 2 Edit:/MaquinaEstadoBUS/clock
-restart -f
-run
-# Write-back block; abort memory access
+add wave -position 1 -autoscale 1 -color {Orange Red} -format Literal -height 17 -editable 2 Edit:/MaquinaEstadoBUS/MSI
 run
 run
-wave create -driver freeze -pattern counter -startvalue 00 -endvalue 10 -type Range -direction Up -period 25ps -step 1 -repeat forever -range 1 0 -starttime 0ps -endtime 10000ps sim:/MaquinaEstadoBUS/MSI
-add wave -position 1 -autoscale 1 -format Literal -height 17 -editable 2 Edit:/MaquinaEstadoBUS/MSI
-restart -f
 run
-# Write-back block; abort memory access
-run
-run
-wave create -driver freeze -pattern counter -startvalue 00 -endvalue 10 -type Range -direction Up -period 100ps -step 1 -repeat forever -range 1 0 -starttime 0ps -endtime 10000ps sim:/MaquinaEstadoBUS/MSI
 restart -f
 run
 # Write-back block; abort memory access
 # Write miss for this block
 run
-add wave -position 1 -autoscale 1 -format Literal -height 17 -editable 2 Edit:/MaquinaEstadoBUS/MSI
 run
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/simulation/modelsim/MaquinaEstadoBUS.do}
-wave editwrite -file {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/simulation/modelsim/MaquinaEstadoBUS.do} -append
+run
+run
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/erick/Downloads/Snooping/Parte I/Cache BUS/simulation/modelsim/MaquinaEstadoBUS.do}
+wave editwrite -file {C:/Users/erick/Downloads/Snooping/Parte I/Cache BUS/simulation/modelsim/MaquinaEstadoBUS.do} -append

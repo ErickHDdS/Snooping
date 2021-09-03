@@ -5,5 +5,5 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ IV/Snooping/Parte\ I/Cache\ BUS {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v}
+vlog -vlog01compat -work work +incdir+C:/Users/erick/Downloads/Snooping/Parte\ I/Cache\ BUS {C:/Users/erick/Downloads/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v}
 
