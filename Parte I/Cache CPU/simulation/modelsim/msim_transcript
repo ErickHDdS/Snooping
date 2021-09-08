@@ -10,7 +10,7 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/erick/Downloads/Snooping/Parte\ I/Cache\ CPU {C:/Users/erick/Downloads/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC\ II/Pratica\ IV/Snooping/Parte\ I/Cache\ CPU {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module MaquinaEstadoCPU
 # 
@@ -20,7 +20,7 @@
 vsim work.MaquinaEstadoCPU
 # vsim work.MaquinaEstadoCPU 
 # Loading work.MaquinaEstadoCPU
-do {C:/Users/erick/Downloads/Snooping/Parte I/Cache CPU/simulation/modelsim/MaquinaEstadoCPU.do}
+do {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/simulation/modelsim/MaquinaEstadoCPU.do}
 # .main_pane.wave.interior.cs.body.pw.wf
 # 1
 # 1
@@ -39,3 +39,36 @@ run
 run
 # CPU write miss | Place write miss on bus
 # CPU read hit
+run
+# CPU write hit
+# CPU read miss | Write-back block | Place read miss on bus
+run
+# CPU write miss | Place write miss on bus
+# CPU read hit
+run
+# CPU write hit
+# CPU read miss | Write-back block | Place read miss on bus
+run
+# CPU write miss | Place write miss on bus
+# CPU read hit
+run
+# CPU write hit
+# CPU read miss | Write-back block | Place read miss on bus
+run
+# CPU write miss | Place write miss on bus
+# CPU read hit
+run
+# CPU write hit
+# CPU read miss | Write-back block | Place read miss on bus
+run
+# CPU write miss | Place write miss on bus
+# CPU read hit
+run
+# CPU write hit
+# CPU read miss | Write-back block | Place read miss on bus
+run
+# CPU write miss | Place write miss on bus
+# CPU read hit
+run
+# CPU write hit
+# CPU read miss | Write-back block | Place read miss on bus

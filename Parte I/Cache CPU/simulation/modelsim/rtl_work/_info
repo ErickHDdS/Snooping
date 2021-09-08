@@ -2,25 +2,25 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\erick\Downloads\Snooping\Parte I\Cache CPU\simulation\modelsim
+Z0 dC:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache CPU\simulation\modelsim
 vMaquinaEstadoCPU
 !i10b 1
-!s100 4LWFl13NS2VoDTSOiY?bo3
-I4h`Hg8_N[kn?Kg@N8N4>82
+!s100 lz>H3?;AHVLe;HFol?hj01
+IbcYDdV]ERNnXOei>BUSJ02
 VN2NQ>JQ9F`8;oGgiHSb_k0
-Z1 dC:\Users\erick\Downloads\Snooping\Parte I\Cache CPU\simulation\modelsim
+Z1 dC:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache CPU\simulation\modelsim
 w1630693993
-8C:/Users/erick/Downloads/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v
-FC:/Users/erick/Downloads/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v
+8C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v
+FC:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v
 L0 1
 OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1630695545.185000
-!s107 C:/Users/erick/Downloads/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/Downloads/Snooping/Parte I/Cache CPU|C:/Users/erick/Downloads/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v|
+!s108 1631060592.772000
+!s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/MaquinaEstadoCPU.v|
 !s101 -O0
 o-vlog01compat -work work -O0
-!s92 -vlog01compat -work work {+incdir+C:/Users/erick/Downloads/Snooping/Parte I/Cache CPU} -O0
+!s92 -vlog01compat -work work {+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU} -O0
 n@maquina@estado@c@p@u

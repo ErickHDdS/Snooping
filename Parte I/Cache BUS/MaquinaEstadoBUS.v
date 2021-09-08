@@ -27,7 +27,7 @@ module MaquinaEstadoBUS(clock, newState, MSI);
 	
 	initial
     state <= 2'b01;
-	 
+	
 	always@(posedge clock)
 		case (state)			
 			exclusive: 

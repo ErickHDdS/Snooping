@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MaquinaEstadoBUS
-Fri Sep 03 15:54:50 2021
+Tue Sep 07 22:01:22 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -45,7 +45,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Sep 03 15:54:50 2021           ;
+; Analysis & Synthesis Status        ; Successful - Tue Sep 07 22:01:22 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MaquinaEstadoBUS                                ;
 ; Top-level Entity Name              ; MaquinaEstadoBUS                                ;
@@ -158,13 +158,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                           ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
-; MaquinaEstadoBUS.v               ; yes             ; User Verilog HDL File  ; C:/Users/erick/Downloads/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                          ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                            ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; MaquinaEstadoBUS.v               ; yes             ; User Verilog HDL File  ; C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -280,7 +280,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Sep 03 15:54:49 2021
+    Info: Processing started: Tue Sep 07 22:01:22 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MaquinaEstadoBUS -c MaquinaEstadoBUS
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file maquinaestadobus.v
@@ -302,9 +302,9 @@ Info (21057): Implemented 5 device resources after synthesis - the final resourc
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 2 output pins
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4594 megabytes
-    Info: Processing ended: Fri Sep 03 15:54:50 2021
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4595 megabytes
+    Info: Processing ended: Tue Sep 07 22:01:22 2021
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
