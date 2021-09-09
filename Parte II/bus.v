@@ -1,21 +1,20 @@
-module bus #(parameter ReadHit)(processador1, processador2, processador3, memory, q);
-  
-  input [8:0] processador1, processador2, processador3, memory;
-  output reg [8:0] q;
-      
-  wire [8:0] Default = {ReadHit, 3'b0, 4'b0};
-
-  always@(*)
-    if(processador1 != Default)
-      q <= processador1;
+module bus (clock, Barramento1, Barramento2, Barramento3, BarramentoMemoria, BusWire);
+	input [10:0] Barramento1;
+	input [10:0] Barramento2;
+	input [10:0] Barramento3;
+	input [10:0] BarramentoMemoria;
+	input clock;
+	output reg [10:0]BusWire;
 		
-    else if(processador2 != Default)
-      q <= processador2;
-	
-	else if(processador3 != Default)
-      q <= processador3;	
-		
-    else
-      q <= memory;
-
+	always @(clock) begin
+		BusWire = 11'b00000000000;
+		if(Barramento1[7] == 1 || Barramento1[5:4] != 2'b00)
+			BusWire = Barramento1;
+		else if(Barramento2[7] == 1 || Barramento2[5:4] != 2'b00)
+			BusWire = Barramento2;
+		else if(Barramento3[7] == 1 || Barramento3[5:4] != 2'b00)
+			BusWire = Barramento3;
+		else if(BarramentoMemoria[5:4] != 2'b00)
+			BusWire = BarramentoMemoria;
+	end
 endmodule

@@ -1,0 +1,1043 @@
+TimeQuest Timing Analyzer report for snoopingMSI
+Wed Sep 08 20:03:33 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clock'
+ 12. Slow Model Hold: 'clock'
+ 13. Slow Model Minimum Pulse Width: 'clock'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clock'
+ 24. Fast Model Hold: 'clock'
+ 25. Fast Model Minimum Pulse Width: 'clock'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; snoopingMSI                                                       ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 327.44 MHz ; 327.44 MHz      ; clock      ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -1.037 ; -14.408       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.380 ; -34.380               ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock'                                                                                                                                                                ;
++--------+-----------------------------------------------------+-----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                           ; To Node                                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------+-----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.037 ; processador:p3|cache[3]                             ; processador:p3|alternaCpu                           ; clock        ; clock       ; 1.000        ; 0.004      ; 2.077      ;
+; -1.027 ; processador:p2|ocorrencias[1]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.000      ; 1.563      ;
+; -1.020 ; processador:p2|ocorrencias[1]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.000      ; 1.556      ;
+; -0.976 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p3|alternaCpu                           ; clock        ; clock       ; 0.500        ; -0.002     ; 1.510      ;
+; -0.974 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; 0.500        ; 0.004      ; 1.514      ;
+; -0.956 ; processador:p3|ocorrencias[0]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.000      ; 1.492      ;
+; -0.954 ; processador:p3|ocorrencias[0]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.000      ; 1.490      ;
+; -0.946 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p2|alternaCpu                           ; clock        ; clock       ; 0.500        ; -0.004     ; 1.478      ;
+; -0.934 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p1|alternaCpu                           ; clock        ; clock       ; 0.500        ; 0.000      ; 1.470      ;
+; -0.927 ; processador:p1|ocorrencias[1]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; -0.004     ; 1.459      ;
+; -0.925 ; processador:p1|ocorrencias[1]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; -0.004     ; 1.457      ;
+; -0.924 ; processador:p2|alternaCpu                           ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.004      ; 1.464      ;
+; -0.923 ; processador:p2|ocorrencias[0]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.000      ; 1.459      ;
+; -0.923 ; processador:p1|alternaCpu                           ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.000      ; 1.459      ;
+; -0.921 ; processador:p1|alternaCpu                           ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.000      ; 1.457      ;
+; -0.917 ; processador:p2|alternaCpu                           ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.004      ; 1.457      ;
+; -0.916 ; processador:p2|ocorrencias[0]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.000      ; 1.452      ;
+; -0.850 ; processador:p3|cache[3]                             ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; 1.000        ; 0.006      ; 1.892      ;
+; -0.844 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p3|alternaCpu                           ; clock        ; clock       ; 0.500        ; -0.002     ; 1.378      ;
+; -0.843 ; processador:p3|cache[4]                             ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.002      ; 1.381      ;
+; -0.843 ; processador:p3|cache[4]                             ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.002      ; 1.381      ;
+; -0.835 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; 0.500        ; 0.004      ; 1.375      ;
+; -0.830 ; processador:p1|ocorrencias[0]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; -0.004     ; 1.362      ;
+; -0.828 ; processador:p3|alternaCpu                           ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.002      ; 1.366      ;
+; -0.828 ; processador:p1|ocorrencias[0]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; -0.004     ; 1.360      ;
+; -0.826 ; processador:p3|alternaCpu                           ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.002      ; 1.364      ;
+; -0.809 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p2|alternaCpu                           ; clock        ; clock       ; 0.500        ; -0.004     ; 1.341      ;
+; -0.804 ; processador:p2|cache[4]                             ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.004      ; 1.344      ;
+; -0.804 ; processador:p2|cache[4]                             ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.004      ; 1.344      ;
+; -0.795 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p1|alternaCpu                           ; clock        ; clock       ; 0.500        ; 0.000      ; 1.331      ;
+; -0.791 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; 0.500        ; 0.000      ; 1.327      ;
+; -0.789 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; 0.500        ; 0.000      ; 1.325      ;
+; -0.788 ; processador:p2|cache[3]                             ; processador:p2|alternaCpu                           ; clock        ; clock       ; 1.000        ; 0.000      ; 1.824      ;
+; -0.662 ; processador:p1|cache[4]                             ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.000      ; 1.198      ;
+; -0.662 ; processador:p1|cache[4]                             ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.000      ; 1.198      ;
+; -0.657 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; 0.500        ; 0.000      ; 1.193      ;
+; -0.654 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; 0.500        ; 0.000      ; 1.190      ;
+; -0.633 ; processador:p2|cache[3]                             ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; 1.000        ; 0.004      ; 1.673      ;
+; -0.629 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p3|cache[5]                             ; clock        ; clock       ; 0.500        ; -0.002     ; 1.163      ;
+; -0.618 ; processador:p1|cache[3]                             ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; 1.000        ; 0.004      ; 1.658      ;
+; -0.579 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p3|cache[4]                             ; clock        ; clock       ; 0.500        ; -0.002     ; 1.113      ;
+; -0.578 ; processador:p1|cache[3]                             ; processador:p1|alternaCpu                           ; clock        ; clock       ; 1.000        ; 0.000      ; 1.614      ;
+; -0.575 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p1|cache[4]                             ; clock        ; clock       ; 0.500        ; 0.000      ; 1.111      ;
+; -0.522 ; processador:p3|ocorrencias[1]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.000      ; 1.058      ;
+; -0.520 ; processador:p3|ocorrencias[1]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.000      ; 1.056      ;
+; -0.444 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p2|cache[4]                             ; clock        ; clock       ; 0.500        ; -0.004     ; 0.976      ;
+; -0.443 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p2|cache[5]                             ; clock        ; clock       ; 0.500        ; -0.004     ; 0.975      ;
+; -0.397 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p1|cache[5]                             ; clock        ; clock       ; 0.500        ; 0.000      ; 0.933      ;
+; 0.379  ; processador:p1|cache[3]                             ; processador:p1|cache[3]                             ; clock        ; clock       ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; processador:p2|cache[3]                             ; processador:p2|cache[3]                             ; clock        ; clock       ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; processador:p3|cache[3]                             ; processador:p3|cache[3]                             ; clock        ; clock       ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; processador:p3|ocorrencias[0]                       ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; processador:p2|ocorrencias[0]                       ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; processador:p1|ocorrencias[0]                       ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; 1.000        ; 0.000      ; 0.657      ;
++--------+-----------------------------------------------------+-----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock'                                                                                                                                                                ;
++-------+-----------------------------------------------------+-----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                           ; To Node                                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------+-----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; processador:p1|cache[3]                             ; processador:p1|cache[3]                             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; processador:p1|ocorrencias[0]                       ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; processador:p2|cache[3]                             ; processador:p2|cache[3]                             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; processador:p2|ocorrencias[0]                       ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; processador:p3|cache[3]                             ; processador:p3|cache[3]                             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; processador:p3|ocorrencias[0]                       ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 1.167 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p1|cache[5]                             ; clock        ; clock       ; -0.500       ; 0.000      ; 0.933      ;
+; 1.213 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p2|cache[5]                             ; clock        ; clock       ; -0.500       ; -0.004     ; 0.975      ;
+; 1.214 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p2|cache[4]                             ; clock        ; clock       ; -0.500       ; -0.004     ; 0.976      ;
+; 1.290 ; processador:p3|ocorrencias[1]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.000      ; 1.056      ;
+; 1.292 ; processador:p3|ocorrencias[1]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.000      ; 1.058      ;
+; 1.345 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p1|cache[4]                             ; clock        ; clock       ; -0.500       ; 0.000      ; 1.111      ;
+; 1.348 ; processador:p1|cache[3]                             ; processador:p1|alternaCpu                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.614      ;
+; 1.349 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p3|cache[4]                             ; clock        ; clock       ; -0.500       ; -0.002     ; 1.113      ;
+; 1.388 ; processador:p1|cache[3]                             ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; 0.000        ; 0.004      ; 1.658      ;
+; 1.399 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p3|cache[5]                             ; clock        ; clock       ; -0.500       ; -0.002     ; 1.163      ;
+; 1.403 ; processador:p2|cache[3]                             ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; 0.000        ; 0.004      ; 1.673      ;
+; 1.424 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; -0.500       ; 0.000      ; 1.190      ;
+; 1.427 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; -0.500       ; 0.000      ; 1.193      ;
+; 1.432 ; processador:p1|cache[4]                             ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.000      ; 1.198      ;
+; 1.432 ; processador:p1|cache[4]                             ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.000      ; 1.198      ;
+; 1.558 ; processador:p2|cache[3]                             ; processador:p2|alternaCpu                           ; clock        ; clock       ; 0.000        ; 0.000      ; 1.824      ;
+; 1.559 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; -0.500       ; 0.000      ; 1.325      ;
+; 1.561 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; -0.500       ; 0.000      ; 1.327      ;
+; 1.565 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p1|alternaCpu                           ; clock        ; clock       ; -0.500       ; 0.000      ; 1.331      ;
+; 1.574 ; processador:p2|cache[4]                             ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.004      ; 1.344      ;
+; 1.574 ; processador:p2|cache[4]                             ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.004      ; 1.344      ;
+; 1.579 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p2|alternaCpu                           ; clock        ; clock       ; -0.500       ; -0.004     ; 1.341      ;
+; 1.596 ; processador:p3|alternaCpu                           ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.002      ; 1.364      ;
+; 1.598 ; processador:p1|ocorrencias[0]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; -0.004     ; 1.360      ;
+; 1.598 ; processador:p3|alternaCpu                           ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.002      ; 1.366      ;
+; 1.600 ; processador:p1|ocorrencias[0]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; -0.004     ; 1.362      ;
+; 1.605 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; -0.500       ; 0.004      ; 1.375      ;
+; 1.613 ; processador:p3|cache[4]                             ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.002      ; 1.381      ;
+; 1.613 ; processador:p3|cache[4]                             ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.002      ; 1.381      ;
+; 1.614 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p3|alternaCpu                           ; clock        ; clock       ; -0.500       ; -0.002     ; 1.378      ;
+; 1.620 ; processador:p3|cache[3]                             ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; 0.000        ; 0.006      ; 1.892      ;
+; 1.686 ; processador:p2|ocorrencias[0]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.000      ; 1.452      ;
+; 1.687 ; processador:p2|alternaCpu                           ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.004      ; 1.457      ;
+; 1.691 ; processador:p1|alternaCpu                           ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.000      ; 1.457      ;
+; 1.693 ; processador:p2|ocorrencias[0]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.000      ; 1.459      ;
+; 1.693 ; processador:p1|alternaCpu                           ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.000      ; 1.459      ;
+; 1.694 ; processador:p2|alternaCpu                           ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.004      ; 1.464      ;
+; 1.695 ; processador:p1|ocorrencias[1]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; -0.004     ; 1.457      ;
+; 1.697 ; processador:p1|ocorrencias[1]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; -0.004     ; 1.459      ;
+; 1.704 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p1|alternaCpu                           ; clock        ; clock       ; -0.500       ; 0.000      ; 1.470      ;
+; 1.716 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p2|alternaCpu                           ; clock        ; clock       ; -0.500       ; -0.004     ; 1.478      ;
+; 1.724 ; processador:p3|ocorrencias[0]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.000      ; 1.490      ;
+; 1.726 ; processador:p3|ocorrencias[0]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.000      ; 1.492      ;
+; 1.744 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; -0.500       ; 0.004      ; 1.514      ;
+; 1.746 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p3|alternaCpu                           ; clock        ; clock       ; -0.500       ; -0.002     ; 1.510      ;
+; 1.790 ; processador:p2|ocorrencias[1]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.000      ; 1.556      ;
+; 1.797 ; processador:p2|ocorrencias[1]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.000      ; 1.563      ;
+; 1.807 ; processador:p3|cache[3]                             ; processador:p3|alternaCpu                           ; clock        ; clock       ; 0.000        ; 0.004      ; 2.077      ;
++-------+-----------------------------------------------------+-----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock'                                                                                              ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                              ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|alternaCpu                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|alternaCpu                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|cache[0]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|cache[0]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|cache[1]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|cache[1]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|cache[2]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|cache[2]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|cache[3]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|cache[3]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|cache[4]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|cache[4]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|cache[5]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|cache[5]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|ocorrencias[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|ocorrencias[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|ocorrencias[1]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|ocorrencias[1]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|alternaCpu                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|alternaCpu                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|cache[0]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|cache[0]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|cache[1]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|cache[1]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|cache[2]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|cache[2]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|cache[3]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|cache[3]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|cache[4]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|cache[4]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|cache[5]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|cache[5]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|ocorrencias[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|ocorrencias[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|ocorrencias[1]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|ocorrencias[1]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|alternaCpu                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|alternaCpu                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|cache[0]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|cache[0]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|cache[1]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|cache[1]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|cache[2]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|cache[2]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|cache[3]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|cache[3]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|cache[4]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|cache[4]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|cache[5]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|cache[5]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|ocorrencias[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|ocorrencias[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|ocorrencias[1]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|ocorrencias[1]                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock|combout                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock|combout                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|inclk[0]                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|inclk[0]                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|outclk                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|outclk                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|alternaCpu|clk                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|alternaCpu|clk                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|cache[0]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|cache[0]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|cache[1]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|cache[1]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|cache[2]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|cache[2]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|cache[3]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|cache[3]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|cache[4]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|cache[4]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|cache[5]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|cache[5]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|maquinaCPU|state[0]|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|maquinaCPU|state[0]|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|maquinaCPU|state[1]|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|maquinaCPU|state[1]|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|ocorrencias[0]|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|ocorrencias[0]|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|ocorrencias[1]|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|ocorrencias[1]|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p2|alternaCpu|clk                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p2|alternaCpu|clk                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p2|cache[0]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p2|cache[0]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p2|cache[1]|clk                                     ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Times                                                                 ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; instruction[*]  ; clock      ; 5.034 ; 5.034 ; Rise       ; clock           ;
+;  instruction[0] ; clock      ; 0.507 ; 0.507 ; Rise       ; clock           ;
+;  instruction[1] ; clock      ; 3.164 ; 3.164 ; Rise       ; clock           ;
+;  instruction[2] ; clock      ; 3.143 ; 3.143 ; Rise       ; clock           ;
+;  instruction[3] ; clock      ; 4.212 ; 4.212 ; Rise       ; clock           ;
+;  instruction[4] ; clock      ; 2.201 ; 2.201 ; Rise       ; clock           ;
+;  instruction[5] ; clock      ; 5.034 ; 5.034 ; Rise       ; clock           ;
+;  instruction[6] ; clock      ; 4.826 ; 4.826 ; Rise       ; clock           ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Hold Times                                                                    ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; instruction[*]  ; clock      ; -0.150 ; -0.150 ; Rise       ; clock           ;
+;  instruction[0] ; clock      ; -0.150 ; -0.150 ; Rise       ; clock           ;
+;  instruction[1] ; clock      ; -2.930 ; -2.930 ; Rise       ; clock           ;
+;  instruction[2] ; clock      ; -2.608 ; -2.608 ; Rise       ; clock           ;
+;  instruction[3] ; clock      ; -2.924 ; -2.924 ; Rise       ; clock           ;
+;  instruction[4] ; clock      ; -0.328 ; -0.328 ; Rise       ; clock           ;
+;  instruction[5] ; clock      ; -2.959 ; -2.959 ; Rise       ; clock           ;
+;  instruction[6] ; clock      ; -2.925 ; -2.925 ; Rise       ; clock           ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; cache1[*]  ; clock      ; 6.088 ; 6.088 ; Rise       ; clock           ;
+;  cache1[0] ; clock      ; 6.062 ; 6.062 ; Rise       ; clock           ;
+;  cache1[1] ; clock      ; 6.074 ; 6.074 ; Rise       ; clock           ;
+;  cache1[2] ; clock      ; 6.062 ; 6.062 ; Rise       ; clock           ;
+;  cache1[3] ; clock      ; 6.047 ; 6.047 ; Rise       ; clock           ;
+;  cache1[4] ; clock      ; 6.088 ; 6.088 ; Rise       ; clock           ;
+;  cache1[5] ; clock      ; 6.062 ; 6.062 ; Rise       ; clock           ;
+; cache2[*]  ; clock      ; 6.350 ; 6.350 ; Rise       ; clock           ;
+;  cache2[0] ; clock      ; 6.073 ; 6.073 ; Rise       ; clock           ;
+;  cache2[1] ; clock      ; 6.350 ; 6.350 ; Rise       ; clock           ;
+;  cache2[2] ; clock      ; 6.084 ; 6.084 ; Rise       ; clock           ;
+;  cache2[3] ; clock      ; 6.052 ; 6.052 ; Rise       ; clock           ;
+;  cache2[4] ; clock      ; 6.064 ; 6.064 ; Rise       ; clock           ;
+;  cache2[5] ; clock      ; 6.075 ; 6.075 ; Rise       ; clock           ;
+; cache3[*]  ; clock      ; 6.540 ; 6.540 ; Rise       ; clock           ;
+;  cache3[0] ; clock      ; 6.040 ; 6.040 ; Rise       ; clock           ;
+;  cache3[1] ; clock      ; 6.072 ; 6.072 ; Rise       ; clock           ;
+;  cache3[2] ; clock      ; 6.030 ; 6.030 ; Rise       ; clock           ;
+;  cache3[3] ; clock      ; 6.247 ; 6.247 ; Rise       ; clock           ;
+;  cache3[4] ; clock      ; 6.258 ; 6.258 ; Rise       ; clock           ;
+;  cache3[5] ; clock      ; 6.540 ; 6.540 ; Rise       ; clock           ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; cache1[*]  ; clock      ; 6.047 ; 6.047 ; Rise       ; clock           ;
+;  cache1[0] ; clock      ; 6.062 ; 6.062 ; Rise       ; clock           ;
+;  cache1[1] ; clock      ; 6.074 ; 6.074 ; Rise       ; clock           ;
+;  cache1[2] ; clock      ; 6.062 ; 6.062 ; Rise       ; clock           ;
+;  cache1[3] ; clock      ; 6.047 ; 6.047 ; Rise       ; clock           ;
+;  cache1[4] ; clock      ; 6.088 ; 6.088 ; Rise       ; clock           ;
+;  cache1[5] ; clock      ; 6.062 ; 6.062 ; Rise       ; clock           ;
+; cache2[*]  ; clock      ; 6.052 ; 6.052 ; Rise       ; clock           ;
+;  cache2[0] ; clock      ; 6.073 ; 6.073 ; Rise       ; clock           ;
+;  cache2[1] ; clock      ; 6.350 ; 6.350 ; Rise       ; clock           ;
+;  cache2[2] ; clock      ; 6.084 ; 6.084 ; Rise       ; clock           ;
+;  cache2[3] ; clock      ; 6.052 ; 6.052 ; Rise       ; clock           ;
+;  cache2[4] ; clock      ; 6.064 ; 6.064 ; Rise       ; clock           ;
+;  cache2[5] ; clock      ; 6.075 ; 6.075 ; Rise       ; clock           ;
+; cache3[*]  ; clock      ; 6.030 ; 6.030 ; Rise       ; clock           ;
+;  cache3[0] ; clock      ; 6.040 ; 6.040 ; Rise       ; clock           ;
+;  cache3[1] ; clock      ; 6.072 ; 6.072 ; Rise       ; clock           ;
+;  cache3[2] ; clock      ; 6.030 ; 6.030 ; Rise       ; clock           ;
+;  cache3[3] ; clock      ; 6.247 ; 6.247 ; Rise       ; clock           ;
+;  cache3[4] ; clock      ; 6.258 ; 6.258 ; Rise       ; clock           ;
+;  cache3[5] ; clock      ; 6.540 ; 6.540 ; Rise       ; clock           ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -0.235 ; -2.011        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.380 ; -34.380               ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock'                                                                                                                                                                ;
++--------+-----------------------------------------------------+-----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                           ; To Node                                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------+-----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.235 ; processador:p2|ocorrencias[1]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.000      ; 0.767      ;
+; -0.207 ; processador:p3|cache[4]                             ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.002      ; 0.741      ;
+; -0.207 ; processador:p3|cache[4]                             ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.002      ; 0.741      ;
+; -0.199 ; processador:p2|cache[4]                             ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.001      ; 0.732      ;
+; -0.199 ; processador:p2|ocorrencias[1]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.000      ; 0.731      ;
+; -0.199 ; processador:p2|cache[4]                             ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.001      ; 0.732      ;
+; -0.181 ; processador:p2|alternaCpu                           ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.001      ; 0.714      ;
+; -0.175 ; processador:p3|ocorrencias[0]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.000      ; 0.707      ;
+; -0.167 ; processador:p1|ocorrencias[1]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; -0.001     ; 0.698      ;
+; -0.163 ; processador:p2|ocorrencias[0]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.000      ; 0.695      ;
+; -0.163 ; processador:p1|alternaCpu                           ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.000      ; 0.695      ;
+; -0.160 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; 0.500        ; 0.001      ; 0.693      ;
+; -0.158 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p3|alternaCpu                           ; clock        ; clock       ; 0.500        ; -0.002     ; 0.688      ;
+; -0.153 ; processador:p3|ocorrencias[0]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.000      ; 0.685      ;
+; -0.152 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p2|alternaCpu                           ; clock        ; clock       ; 0.500        ; -0.001     ; 0.683      ;
+; -0.146 ; processador:p1|ocorrencias[1]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; -0.001     ; 0.677      ;
+; -0.145 ; processador:p2|alternaCpu                           ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.001      ; 0.678      ;
+; -0.142 ; processador:p1|alternaCpu                           ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.000      ; 0.674      ;
+; -0.137 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p1|alternaCpu                           ; clock        ; clock       ; 0.500        ; 0.000      ; 0.669      ;
+; -0.128 ; processador:p1|cache[4]                             ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.000      ; 0.660      ;
+; -0.128 ; processador:p1|cache[4]                             ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.000      ; 0.660      ;
+; -0.127 ; processador:p2|ocorrencias[0]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.000      ; 0.659      ;
+; -0.126 ; processador:p1|ocorrencias[0]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; -0.001     ; 0.657      ;
+; -0.124 ; processador:p3|alternaCpu                           ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.002      ; 0.658      ;
+; -0.109 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p3|alternaCpu                           ; clock        ; clock       ; 0.500        ; -0.002     ; 0.639      ;
+; -0.105 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; 0.500        ; 0.001      ; 0.638      ;
+; -0.105 ; processador:p1|ocorrencias[0]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; -0.001     ; 0.636      ;
+; -0.102 ; processador:p3|alternaCpu                           ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.002      ; 0.636      ;
+; -0.100 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p2|alternaCpu                           ; clock        ; clock       ; 0.500        ; -0.001     ; 0.631      ;
+; -0.082 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p1|alternaCpu                           ; clock        ; clock       ; 0.500        ; 0.000      ; 0.614      ;
+; -0.077 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; 0.500        ; 0.000      ; 0.609      ;
+; -0.076 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; 0.500        ; 0.000      ; 0.608      ;
+; -0.032 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p3|cache[5]                             ; clock        ; clock       ; 0.500        ; -0.002     ; 0.562      ;
+; -0.030 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p3|cache[4]                             ; clock        ; clock       ; 0.500        ; -0.002     ; 0.560      ;
+; -0.028 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p1|cache[4]                             ; clock        ; clock       ; 0.500        ; 0.000      ; 0.560      ;
+; -0.027 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; 0.500        ; 0.000      ; 0.559      ;
+; -0.025 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; 0.500        ; 0.000      ; 0.557      ;
+; -0.024 ; processador:p3|ocorrencias[1]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; 0.500        ; 0.000      ; 0.556      ;
+; -0.002 ; processador:p3|ocorrencias[1]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; 0.500        ; 0.000      ; 0.534      ;
+; 0.051  ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p1|cache[5]                             ; clock        ; clock       ; 0.500        ; 0.000      ; 0.481      ;
+; 0.056  ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p2|cache[4]                             ; clock        ; clock       ; 0.500        ; -0.001     ; 0.475      ;
+; 0.056  ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p2|cache[5]                             ; clock        ; clock       ; 0.500        ; -0.001     ; 0.475      ;
+; 0.079  ; processador:p3|cache[3]                             ; processador:p3|alternaCpu                           ; clock        ; clock       ; 1.000        ; 0.001      ; 0.954      ;
+; 0.161  ; processador:p3|cache[3]                             ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; 1.000        ; 0.003      ; 0.874      ;
+; 0.194  ; processador:p2|cache[3]                             ; processador:p2|alternaCpu                           ; clock        ; clock       ; 1.000        ; 0.000      ; 0.838      ;
+; 0.269  ; processador:p2|cache[3]                             ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; 1.000        ; 0.001      ; 0.764      ;
+; 0.272  ; processador:p1|cache[3]                             ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; 1.000        ; 0.001      ; 0.761      ;
+; 0.295  ; processador:p1|cache[3]                             ; processador:p1|alternaCpu                           ; clock        ; clock       ; 1.000        ; 0.000      ; 0.737      ;
+; 0.665  ; processador:p1|cache[3]                             ; processador:p1|cache[3]                             ; clock        ; clock       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; processador:p2|cache[3]                             ; processador:p2|cache[3]                             ; clock        ; clock       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; processador:p3|cache[3]                             ; processador:p3|cache[3]                             ; clock        ; clock       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; processador:p3|ocorrencias[0]                       ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; processador:p2|ocorrencias[0]                       ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; processador:p1|ocorrencias[0]                       ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; 1.000        ; 0.000      ; 0.367      ;
++--------+-----------------------------------------------------+-----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock'                                                                                                                                                                ;
++-------+-----------------------------------------------------+-----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                           ; To Node                                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------+-----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; processador:p1|cache[3]                             ; processador:p1|cache[3]                             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; processador:p1|ocorrencias[0]                       ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; processador:p2|cache[3]                             ; processador:p2|cache[3]                             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; processador:p2|ocorrencias[0]                       ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; processador:p3|cache[3]                             ; processador:p3|cache[3]                             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; processador:p3|ocorrencias[0]                       ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.585 ; processador:p1|cache[3]                             ; processador:p1|alternaCpu                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.737      ;
+; 0.608 ; processador:p1|cache[3]                             ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; 0.000        ; 0.001      ; 0.761      ;
+; 0.611 ; processador:p2|cache[3]                             ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; 0.000        ; 0.001      ; 0.764      ;
+; 0.686 ; processador:p2|cache[3]                             ; processador:p2|alternaCpu                           ; clock        ; clock       ; 0.000        ; 0.000      ; 0.838      ;
+; 0.719 ; processador:p3|cache[3]                             ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; 0.000        ; 0.003      ; 0.874      ;
+; 0.801 ; processador:p3|cache[3]                             ; processador:p3|alternaCpu                           ; clock        ; clock       ; 0.000        ; 0.001      ; 0.954      ;
+; 0.824 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p2|cache[4]                             ; clock        ; clock       ; -0.500       ; -0.001     ; 0.475      ;
+; 0.824 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p2|cache[5]                             ; clock        ; clock       ; -0.500       ; -0.001     ; 0.475      ;
+; 0.829 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p1|cache[5]                             ; clock        ; clock       ; -0.500       ; 0.000      ; 0.481      ;
+; 0.882 ; processador:p3|ocorrencias[1]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.000      ; 0.534      ;
+; 0.904 ; processador:p3|ocorrencias[1]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.000      ; 0.556      ;
+; 0.905 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; -0.500       ; 0.000      ; 0.557      ;
+; 0.907 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; -0.500       ; 0.000      ; 0.559      ;
+; 0.908 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p1|cache[4]                             ; clock        ; clock       ; -0.500       ; 0.000      ; 0.560      ;
+; 0.910 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p3|cache[4]                             ; clock        ; clock       ; -0.500       ; -0.002     ; 0.560      ;
+; 0.912 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p3|cache[5]                             ; clock        ; clock       ; -0.500       ; -0.002     ; 0.562      ;
+; 0.956 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p3|ocorrencias[0]                       ; clock        ; clock       ; -0.500       ; 0.000      ; 0.608      ;
+; 0.957 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p2|ocorrencias[0]                       ; clock        ; clock       ; -0.500       ; 0.000      ; 0.609      ;
+; 0.962 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p1|alternaCpu                           ; clock        ; clock       ; -0.500       ; 0.000      ; 0.614      ;
+; 0.980 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p2|alternaCpu                           ; clock        ; clock       ; -0.500       ; -0.001     ; 0.631      ;
+; 0.982 ; processador:p3|alternaCpu                           ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.002      ; 0.636      ;
+; 0.985 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; -0.500       ; 0.001      ; 0.638      ;
+; 0.985 ; processador:p1|ocorrencias[0]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; -0.001     ; 0.636      ;
+; 0.989 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; processador:p3|alternaCpu                           ; clock        ; clock       ; -0.500       ; -0.002     ; 0.639      ;
+; 1.004 ; processador:p3|alternaCpu                           ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.002      ; 0.658      ;
+; 1.006 ; processador:p1|ocorrencias[0]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; -0.001     ; 0.657      ;
+; 1.007 ; processador:p2|ocorrencias[0]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.000      ; 0.659      ;
+; 1.008 ; processador:p1|cache[4]                             ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.000      ; 0.660      ;
+; 1.008 ; processador:p1|cache[4]                             ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.000      ; 0.660      ;
+; 1.017 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p1|alternaCpu                           ; clock        ; clock       ; -0.500       ; 0.000      ; 0.669      ;
+; 1.022 ; processador:p1|alternaCpu                           ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.000      ; 0.674      ;
+; 1.025 ; processador:p2|alternaCpu                           ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.001      ; 0.678      ;
+; 1.026 ; processador:p1|ocorrencias[1]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; -0.001     ; 0.677      ;
+; 1.032 ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p2|alternaCpu                           ; clock        ; clock       ; -0.500       ; -0.001     ; 0.683      ;
+; 1.033 ; processador:p3|ocorrencias[0]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.000      ; 0.685      ;
+; 1.038 ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p3|alternaCpu                           ; clock        ; clock       ; -0.500       ; -0.002     ; 0.688      ;
+; 1.040 ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ; processador:p1|ocorrencias[0]                       ; clock        ; clock       ; -0.500       ; 0.001      ; 0.693      ;
+; 1.043 ; processador:p2|ocorrencias[0]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.000      ; 0.695      ;
+; 1.043 ; processador:p1|alternaCpu                           ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.000      ; 0.695      ;
+; 1.047 ; processador:p1|ocorrencias[1]                       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; -0.001     ; 0.698      ;
+; 1.055 ; processador:p3|ocorrencias[0]                       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.000      ; 0.707      ;
+; 1.061 ; processador:p2|alternaCpu                           ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.001      ; 0.714      ;
+; 1.079 ; processador:p2|cache[4]                             ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.001      ; 0.732      ;
+; 1.079 ; processador:p2|cache[4]                             ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.001      ; 0.732      ;
+; 1.079 ; processador:p2|ocorrencias[1]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.000      ; 0.731      ;
+; 1.087 ; processador:p3|cache[4]                             ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.002      ; 0.741      ;
+; 1.087 ; processador:p3|cache[4]                             ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ; clock        ; clock       ; -0.500       ; 0.002      ; 0.741      ;
+; 1.115 ; processador:p2|ocorrencias[1]                       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ; clock        ; clock       ; -0.500       ; 0.000      ; 0.767      ;
++-------+-----------------------------------------------------+-----------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock'                                                                                              ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                              ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; processador:p1|MaquinaEstadoCPU:maquinaCPU|state[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|alternaCpu                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|alternaCpu                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|cache[0]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|cache[0]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|cache[1]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|cache[1]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|cache[2]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|cache[2]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|cache[3]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|cache[3]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|cache[4]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|cache[4]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|cache[5]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|cache[5]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|ocorrencias[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|ocorrencias[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p1|ocorrencias[1]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p1|ocorrencias[1]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; processador:p2|MaquinaEstadoCPU:maquinaCPU|state[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|alternaCpu                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|alternaCpu                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|cache[0]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|cache[0]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|cache[1]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|cache[1]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|cache[2]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|cache[2]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|cache[3]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|cache[3]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|cache[4]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|cache[4]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|cache[5]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|cache[5]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|ocorrencias[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|ocorrencias[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p2|ocorrencias[1]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p2|ocorrencias[1]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Fall       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Fall       ; processador:p3|MaquinaEstadoCPU:maquinaCPU|state[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|alternaCpu                           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|alternaCpu                           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|cache[0]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|cache[0]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|cache[1]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|cache[1]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|cache[2]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|cache[2]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|cache[3]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|cache[3]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|cache[4]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|cache[4]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|cache[5]                             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|cache[5]                             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|ocorrencias[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|ocorrencias[0]                       ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; processador:p3|ocorrencias[1]                       ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; processador:p3|ocorrencias[1]                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock|combout                                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock|combout                                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|inclk[0]                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|inclk[0]                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; clock~clkctrl|outclk                                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; clock~clkctrl|outclk                                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|alternaCpu|clk                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|alternaCpu|clk                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|cache[0]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|cache[0]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|cache[1]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|cache[1]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|cache[2]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|cache[2]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|cache[3]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|cache[3]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|cache[4]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|cache[4]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|cache[5]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|cache[5]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|maquinaCPU|state[0]|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|maquinaCPU|state[0]|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|maquinaCPU|state[1]|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|maquinaCPU|state[1]|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|ocorrencias[0]|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|ocorrencias[0]|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p1|ocorrencias[1]|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p1|ocorrencias[1]|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p2|alternaCpu|clk                                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p2|alternaCpu|clk                                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p2|cache[0]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; p2|cache[0]|clk                                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; p2|cache[1]|clk                                     ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Setup Times                                                                   ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; instruction[*]  ; clock      ; 2.668  ; 2.668  ; Rise       ; clock           ;
+;  instruction[0] ; clock      ; -0.041 ; -0.041 ; Rise       ; clock           ;
+;  instruction[1] ; clock      ; 1.752  ; 1.752  ; Rise       ; clock           ;
+;  instruction[2] ; clock      ; 1.733  ; 1.733  ; Rise       ; clock           ;
+;  instruction[3] ; clock      ; 2.189  ; 2.189  ; Rise       ; clock           ;
+;  instruction[4] ; clock      ; 0.864  ; 0.864  ; Rise       ; clock           ;
+;  instruction[5] ; clock      ; 2.668  ; 2.668  ; Rise       ; clock           ;
+;  instruction[6] ; clock      ; 2.596  ; 2.596  ; Rise       ; clock           ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Hold Times                                                                    ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; instruction[*]  ; clock      ; 0.186  ; 0.186  ; Rise       ; clock           ;
+;  instruction[0] ; clock      ; 0.186  ; 0.186  ; Rise       ; clock           ;
+;  instruction[1] ; clock      ; -1.631 ; -1.631 ; Rise       ; clock           ;
+;  instruction[2] ; clock      ; -1.471 ; -1.471 ; Rise       ; clock           ;
+;  instruction[3] ; clock      ; -1.604 ; -1.604 ; Rise       ; clock           ;
+;  instruction[4] ; clock      ; 0.084  ; 0.084  ; Rise       ; clock           ;
+;  instruction[5] ; clock      ; -1.653 ; -1.653 ; Rise       ; clock           ;
+;  instruction[6] ; clock      ; -1.633 ; -1.633 ; Rise       ; clock           ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; cache1[*]  ; clock      ; 3.466 ; 3.466 ; Rise       ; clock           ;
+;  cache1[0] ; clock      ; 3.453 ; 3.453 ; Rise       ; clock           ;
+;  cache1[1] ; clock      ; 3.457 ; 3.457 ; Rise       ; clock           ;
+;  cache1[2] ; clock      ; 3.453 ; 3.453 ; Rise       ; clock           ;
+;  cache1[3] ; clock      ; 3.432 ; 3.432 ; Rise       ; clock           ;
+;  cache1[4] ; clock      ; 3.466 ; 3.466 ; Rise       ; clock           ;
+;  cache1[5] ; clock      ; 3.451 ; 3.451 ; Rise       ; clock           ;
+; cache2[*]  ; clock      ; 3.580 ; 3.580 ; Rise       ; clock           ;
+;  cache2[0] ; clock      ; 3.463 ; 3.463 ; Rise       ; clock           ;
+;  cache2[1] ; clock      ; 3.580 ; 3.580 ; Rise       ; clock           ;
+;  cache2[2] ; clock      ; 3.467 ; 3.467 ; Rise       ; clock           ;
+;  cache2[3] ; clock      ; 3.438 ; 3.438 ; Rise       ; clock           ;
+;  cache2[4] ; clock      ; 3.442 ; 3.442 ; Rise       ; clock           ;
+;  cache2[5] ; clock      ; 3.466 ; 3.466 ; Rise       ; clock           ;
+; cache3[*]  ; clock      ; 3.665 ; 3.665 ; Rise       ; clock           ;
+;  cache3[0] ; clock      ; 3.430 ; 3.430 ; Rise       ; clock           ;
+;  cache3[1] ; clock      ; 3.454 ; 3.454 ; Rise       ; clock           ;
+;  cache3[2] ; clock      ; 3.420 ; 3.420 ; Rise       ; clock           ;
+;  cache3[3] ; clock      ; 3.536 ; 3.536 ; Rise       ; clock           ;
+;  cache3[4] ; clock      ; 3.542 ; 3.542 ; Rise       ; clock           ;
+;  cache3[5] ; clock      ; 3.665 ; 3.665 ; Rise       ; clock           ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; cache1[*]  ; clock      ; 3.432 ; 3.432 ; Rise       ; clock           ;
+;  cache1[0] ; clock      ; 3.453 ; 3.453 ; Rise       ; clock           ;
+;  cache1[1] ; clock      ; 3.457 ; 3.457 ; Rise       ; clock           ;
+;  cache1[2] ; clock      ; 3.453 ; 3.453 ; Rise       ; clock           ;
+;  cache1[3] ; clock      ; 3.432 ; 3.432 ; Rise       ; clock           ;
+;  cache1[4] ; clock      ; 3.466 ; 3.466 ; Rise       ; clock           ;
+;  cache1[5] ; clock      ; 3.451 ; 3.451 ; Rise       ; clock           ;
+; cache2[*]  ; clock      ; 3.438 ; 3.438 ; Rise       ; clock           ;
+;  cache2[0] ; clock      ; 3.463 ; 3.463 ; Rise       ; clock           ;
+;  cache2[1] ; clock      ; 3.580 ; 3.580 ; Rise       ; clock           ;
+;  cache2[2] ; clock      ; 3.467 ; 3.467 ; Rise       ; clock           ;
+;  cache2[3] ; clock      ; 3.438 ; 3.438 ; Rise       ; clock           ;
+;  cache2[4] ; clock      ; 3.442 ; 3.442 ; Rise       ; clock           ;
+;  cache2[5] ; clock      ; 3.466 ; 3.466 ; Rise       ; clock           ;
+; cache3[*]  ; clock      ; 3.420 ; 3.420 ; Rise       ; clock           ;
+;  cache3[0] ; clock      ; 3.430 ; 3.430 ; Rise       ; clock           ;
+;  cache3[1] ; clock      ; 3.454 ; 3.454 ; Rise       ; clock           ;
+;  cache3[2] ; clock      ; 3.420 ; 3.420 ; Rise       ; clock           ;
+;  cache3[3] ; clock      ; 3.536 ; 3.536 ; Rise       ; clock           ;
+;  cache3[4] ; clock      ; 3.542 ; 3.542 ; Rise       ; clock           ;
+;  cache3[5] ; clock      ; 3.665 ; 3.665 ; Rise       ; clock           ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.037  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  clock           ; -1.037  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -14.408 ; 0.0   ; 0.0      ; 0.0     ; -34.38              ;
+;  clock           ; -14.408 ; 0.000 ; N/A      ; N/A     ; -34.380             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------------+
+; Setup Times                                                                 ;
++-----------------+------------+-------+-------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------------+------------+-------+-------+------------+-----------------+
+; instruction[*]  ; clock      ; 5.034 ; 5.034 ; Rise       ; clock           ;
+;  instruction[0] ; clock      ; 0.507 ; 0.507 ; Rise       ; clock           ;
+;  instruction[1] ; clock      ; 3.164 ; 3.164 ; Rise       ; clock           ;
+;  instruction[2] ; clock      ; 3.143 ; 3.143 ; Rise       ; clock           ;
+;  instruction[3] ; clock      ; 4.212 ; 4.212 ; Rise       ; clock           ;
+;  instruction[4] ; clock      ; 2.201 ; 2.201 ; Rise       ; clock           ;
+;  instruction[5] ; clock      ; 5.034 ; 5.034 ; Rise       ; clock           ;
+;  instruction[6] ; clock      ; 4.826 ; 4.826 ; Rise       ; clock           ;
++-----------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Hold Times                                                                    ;
++-----------------+------------+--------+--------+------------+-----------------+
+; Data Port       ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------------+------------+--------+--------+------------+-----------------+
+; instruction[*]  ; clock      ; 0.186  ; 0.186  ; Rise       ; clock           ;
+;  instruction[0] ; clock      ; 0.186  ; 0.186  ; Rise       ; clock           ;
+;  instruction[1] ; clock      ; -1.631 ; -1.631 ; Rise       ; clock           ;
+;  instruction[2] ; clock      ; -1.471 ; -1.471 ; Rise       ; clock           ;
+;  instruction[3] ; clock      ; -1.604 ; -1.604 ; Rise       ; clock           ;
+;  instruction[4] ; clock      ; 0.084  ; 0.084  ; Rise       ; clock           ;
+;  instruction[5] ; clock      ; -1.653 ; -1.653 ; Rise       ; clock           ;
+;  instruction[6] ; clock      ; -1.633 ; -1.633 ; Rise       ; clock           ;
++-----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; cache1[*]  ; clock      ; 6.088 ; 6.088 ; Rise       ; clock           ;
+;  cache1[0] ; clock      ; 6.062 ; 6.062 ; Rise       ; clock           ;
+;  cache1[1] ; clock      ; 6.074 ; 6.074 ; Rise       ; clock           ;
+;  cache1[2] ; clock      ; 6.062 ; 6.062 ; Rise       ; clock           ;
+;  cache1[3] ; clock      ; 6.047 ; 6.047 ; Rise       ; clock           ;
+;  cache1[4] ; clock      ; 6.088 ; 6.088 ; Rise       ; clock           ;
+;  cache1[5] ; clock      ; 6.062 ; 6.062 ; Rise       ; clock           ;
+; cache2[*]  ; clock      ; 6.350 ; 6.350 ; Rise       ; clock           ;
+;  cache2[0] ; clock      ; 6.073 ; 6.073 ; Rise       ; clock           ;
+;  cache2[1] ; clock      ; 6.350 ; 6.350 ; Rise       ; clock           ;
+;  cache2[2] ; clock      ; 6.084 ; 6.084 ; Rise       ; clock           ;
+;  cache2[3] ; clock      ; 6.052 ; 6.052 ; Rise       ; clock           ;
+;  cache2[4] ; clock      ; 6.064 ; 6.064 ; Rise       ; clock           ;
+;  cache2[5] ; clock      ; 6.075 ; 6.075 ; Rise       ; clock           ;
+; cache3[*]  ; clock      ; 6.540 ; 6.540 ; Rise       ; clock           ;
+;  cache3[0] ; clock      ; 6.040 ; 6.040 ; Rise       ; clock           ;
+;  cache3[1] ; clock      ; 6.072 ; 6.072 ; Rise       ; clock           ;
+;  cache3[2] ; clock      ; 6.030 ; 6.030 ; Rise       ; clock           ;
+;  cache3[3] ; clock      ; 6.247 ; 6.247 ; Rise       ; clock           ;
+;  cache3[4] ; clock      ; 6.258 ; 6.258 ; Rise       ; clock           ;
+;  cache3[5] ; clock      ; 6.540 ; 6.540 ; Rise       ; clock           ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; cache1[*]  ; clock      ; 3.432 ; 3.432 ; Rise       ; clock           ;
+;  cache1[0] ; clock      ; 3.453 ; 3.453 ; Rise       ; clock           ;
+;  cache1[1] ; clock      ; 3.457 ; 3.457 ; Rise       ; clock           ;
+;  cache1[2] ; clock      ; 3.453 ; 3.453 ; Rise       ; clock           ;
+;  cache1[3] ; clock      ; 3.432 ; 3.432 ; Rise       ; clock           ;
+;  cache1[4] ; clock      ; 3.466 ; 3.466 ; Rise       ; clock           ;
+;  cache1[5] ; clock      ; 3.451 ; 3.451 ; Rise       ; clock           ;
+; cache2[*]  ; clock      ; 3.438 ; 3.438 ; Rise       ; clock           ;
+;  cache2[0] ; clock      ; 3.463 ; 3.463 ; Rise       ; clock           ;
+;  cache2[1] ; clock      ; 3.580 ; 3.580 ; Rise       ; clock           ;
+;  cache2[2] ; clock      ; 3.467 ; 3.467 ; Rise       ; clock           ;
+;  cache2[3] ; clock      ; 3.438 ; 3.438 ; Rise       ; clock           ;
+;  cache2[4] ; clock      ; 3.442 ; 3.442 ; Rise       ; clock           ;
+;  cache2[5] ; clock      ; 3.466 ; 3.466 ; Rise       ; clock           ;
+; cache3[*]  ; clock      ; 3.420 ; 3.420 ; Rise       ; clock           ;
+;  cache3[0] ; clock      ; 3.430 ; 3.430 ; Rise       ; clock           ;
+;  cache3[1] ; clock      ; 3.454 ; 3.454 ; Rise       ; clock           ;
+;  cache3[2] ; clock      ; 3.420 ; 3.420 ; Rise       ; clock           ;
+;  cache3[3] ; clock      ; 3.536 ; 3.536 ; Rise       ; clock           ;
+;  cache3[4] ; clock      ; 3.542 ; 3.542 ; Rise       ; clock           ;
+;  cache3[5] ; clock      ; 3.665 ; 3.665 ; Rise       ; clock           ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 12       ; 18       ; 24       ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 12       ; 18       ; 24       ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 7     ; 7    ;
+; Unconstrained Input Port Paths  ; 81    ; 81   ;
+; Unconstrained Output Ports      ; 18    ; 18   ;
+; Unconstrained Output Port Paths ; 18    ; 18   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Sep 08 20:03:32 2021
+Info: Command: quartus_sta snoopingMSI -c snoopingMSI
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'snoopingMSI.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.037
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.037       -14.408 clock 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -34.380 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.235
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.235        -2.011 clock 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -34.380 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4537 megabytes
+    Info: Processing ended: Wed Sep 08 20:03:33 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
