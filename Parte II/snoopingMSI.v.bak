@@ -1,20 +1,13 @@
-module snoopingMSI(clock, instructionruction, cache1, cache2, cache3);
-	
-	input clock;
+module snoopingMSI(clock, instruction, cache1, cache2, cache3);	input clock;
 	input [6:0] instruction;
 	output [5:0] cache1;
 	output [5:0] cache2;
 	output [5:0] cache3;
-	wire [10:0] b1; 
-	wire [10:0] b2;
-	wire [10:0] b3;
-	wire [10:0] mem_bus;
-	wire [10:0] bus_wire;
 	
-	processador p1(instruction, bus_wire, clock, 2'b01, b1, cache1);
-	processador p2(instruction, bus_wire, clock, 2'b10, b2, cache2);
-	processador p3(instruction, bus_wire, clock, 2'b11, b3, cache3);
-	mem m(bus_wire, Clock, mem_bus); 
-	bus barramento(b1, b2, b3, mem_bus, clock, bus_wire);
+	processador p1(clock, instruction, cache1);
+	processador p2(clock, instruction, cache2);
+	processador p3(clock, instruction, cache3);
+	Memoria mem(clock); 
+	bus barramento(clock);
 
 endmodule

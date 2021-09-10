@@ -1,0 +1,3 @@
+module bus(clock);
+ // barramento dos processadores
+endmodule

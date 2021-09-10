@@ -1,2 +1,0 @@
-Warning (10268): Verilog HDL information at maquinaestadocpu.v(37): always construct contains both blocking and non-blocking assignments
-Warning (10268): Verilog HDL information at maquinaestadobus.v(33): always construct contains both blocking and non-blocking assignments
