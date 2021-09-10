@@ -1,4 +1,5 @@
 module memoria(clock, bus, memOut);
+  input clock;
   input [8:0] bus;
   output reg [8:0] memOut;
 

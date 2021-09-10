@@ -1,7 +1,7 @@
 module bus(clock, processador1, processador2, processador3, memory, busOut);
  
 	input clock;
-	input [8:0] clock, processador1, processador2, processador3, memory;
+	input [8:0] processador1, processador2, processador3, memory;
 	output reg [8:0] busOut;
 	
 	always@(*)

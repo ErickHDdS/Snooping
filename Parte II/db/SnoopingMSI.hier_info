@@ -1,0 +1,318 @@
+|SnoopingMSI
+clock => clock.IN5
+instruction[0] => instruction[0].IN3
+instruction[1] => instruction[1].IN3
+instruction[2] => instruction[2].IN3
+instruction[3] => instruction[3].IN3
+instruction[4] => instruction[4].IN3
+instruction[5] => instruction[5].IN3
+instruction[6] => instruction[6].IN3
+cache1[0] <= processador:p1.port3
+cache1[1] <= processador:p1.port3
+cache1[2] <= processador:p1.port3
+cache1[3] <= processador:p1.port3
+cache1[4] <= processador:p1.port3
+cache1[5] <= processador:p1.port3
+cache2[0] <= processador:p2.port3
+cache2[1] <= processador:p2.port3
+cache2[2] <= processador:p2.port3
+cache2[3] <= processador:p2.port3
+cache2[4] <= processador:p2.port3
+cache2[5] <= processador:p2.port3
+cache3[0] <= processador:p3.port3
+cache3[1] <= processador:p3.port3
+cache3[2] <= processador:p3.port3
+cache3[3] <= processador:p3.port3
+cache3[4] <= processador:p3.port3
+cache3[5] <= processador:p3.port3
+
+
+|SnoopingMSI|processador:p1
+clock => clock.IN2
+instruction[0] => instruction[0].IN2
+instruction[1] => instruction[1].IN2
+instruction[2] => instruction[2].IN2
+instruction[3] => instruction[3].IN2
+instruction[4] => instruction[4].IN2
+instruction[5] => instruction[5].IN2
+instruction[6] => instruction[6].IN2
+busWires[0] <= <GND>
+busWires[1] <= <GND>
+busWires[2] <= <GND>
+busWires[3] <= <GND>
+busWires[4] <= <GND>
+busWires[5] <= <GND>
+busWires[6] <= <GND>
+busWires[7] <= <GND>
+busWires[8] <= <GND>
+cache[0] <= <GND>
+cache[1] <= <GND>
+cache[2] <= <GND>
+cache[3] <= <GND>
+cache[4] <= <GND>
+cache[5] <= <GND>
+
+
+|SnoopingMSI|processador:p1|MaquinaEmissora:maqE
+clock => newStateOp[0]~reg0.CLK
+clock => newStateOp[1]~reg0.CLK
+clock => state[0]~reg0.CLK
+clock => state[1]~reg0.CLK
+newStateOp[0] <= newStateOp[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+newStateOp[1] <= newStateOp[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+MSI[0] => Decoder0.IN1
+MSI[0] => Mux3.IN1
+MSI[0] => Mux3.IN2
+MSI[1] => Decoder0.IN0
+MSI[1] => Mux2.IN1
+MSI[1] => Mux2.IN2
+
+
+|SnoopingMSI|processador:p1|MaquinaReceptora:maqR
+clock => newState[0]~reg0.CLK
+clock => newState[1]~reg0.CLK
+clock => state[0]~reg0.CLK
+clock => state[1]~reg0.CLK
+newState[0] <= newState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+newState[1] <= newState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+MSI[0] => Equal0.IN3
+MSI[0] => Equal1.IN3
+MSI[0] => Mux0.IN4
+MSI[0] => Decoder0.IN1
+MSI[1] => Equal0.IN2
+MSI[1] => Equal1.IN2
+MSI[1] => Mux0.IN3
+MSI[1] => Decoder0.IN0
+
+
+|SnoopingMSI|processador:p2
+clock => clock.IN2
+instruction[0] => instruction[0].IN2
+instruction[1] => instruction[1].IN2
+instruction[2] => instruction[2].IN2
+instruction[3] => instruction[3].IN2
+instruction[4] => instruction[4].IN2
+instruction[5] => instruction[5].IN2
+instruction[6] => instruction[6].IN2
+busWires[0] <= <GND>
+busWires[1] <= <GND>
+busWires[2] <= <GND>
+busWires[3] <= <GND>
+busWires[4] <= <GND>
+busWires[5] <= <GND>
+busWires[6] <= <GND>
+busWires[7] <= <GND>
+busWires[8] <= <GND>
+cache[0] <= <GND>
+cache[1] <= <GND>
+cache[2] <= <GND>
+cache[3] <= <GND>
+cache[4] <= <GND>
+cache[5] <= <GND>
+
+
+|SnoopingMSI|processador:p2|MaquinaEmissora:maqE
+clock => newStateOp[0]~reg0.CLK
+clock => newStateOp[1]~reg0.CLK
+clock => state[0]~reg0.CLK
+clock => state[1]~reg0.CLK
+newStateOp[0] <= newStateOp[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+newStateOp[1] <= newStateOp[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+MSI[0] => Decoder0.IN1
+MSI[0] => Mux3.IN1
+MSI[0] => Mux3.IN2
+MSI[1] => Decoder0.IN0
+MSI[1] => Mux2.IN1
+MSI[1] => Mux2.IN2
+
+
+|SnoopingMSI|processador:p2|MaquinaReceptora:maqR
+clock => newState[0]~reg0.CLK
+clock => newState[1]~reg0.CLK
+clock => state[0]~reg0.CLK
+clock => state[1]~reg0.CLK
+newState[0] <= newState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+newState[1] <= newState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+MSI[0] => Equal0.IN3
+MSI[0] => Equal1.IN3
+MSI[0] => Mux0.IN4
+MSI[0] => Decoder0.IN1
+MSI[1] => Equal0.IN2
+MSI[1] => Equal1.IN2
+MSI[1] => Mux0.IN3
+MSI[1] => Decoder0.IN0
+
+
+|SnoopingMSI|processador:p3
+clock => clock.IN2
+instruction[0] => instruction[0].IN2
+instruction[1] => instruction[1].IN2
+instruction[2] => instruction[2].IN2
+instruction[3] => instruction[3].IN2
+instruction[4] => instruction[4].IN2
+instruction[5] => instruction[5].IN2
+instruction[6] => instruction[6].IN2
+busWires[0] <= <GND>
+busWires[1] <= <GND>
+busWires[2] <= <GND>
+busWires[3] <= <GND>
+busWires[4] <= <GND>
+busWires[5] <= <GND>
+busWires[6] <= <GND>
+busWires[7] <= <GND>
+busWires[8] <= <GND>
+cache[0] <= <GND>
+cache[1] <= <GND>
+cache[2] <= <GND>
+cache[3] <= <GND>
+cache[4] <= <GND>
+cache[5] <= <GND>
+
+
+|SnoopingMSI|processador:p3|MaquinaEmissora:maqE
+clock => newStateOp[0]~reg0.CLK
+clock => newStateOp[1]~reg0.CLK
+clock => state[0]~reg0.CLK
+clock => state[1]~reg0.CLK
+newStateOp[0] <= newStateOp[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+newStateOp[1] <= newStateOp[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+MSI[0] => Decoder0.IN1
+MSI[0] => Mux3.IN1
+MSI[0] => Mux3.IN2
+MSI[1] => Decoder0.IN0
+MSI[1] => Mux2.IN1
+MSI[1] => Mux2.IN2
+
+
+|SnoopingMSI|processador:p3|MaquinaReceptora:maqR
+clock => newState[0]~reg0.CLK
+clock => newState[1]~reg0.CLK
+clock => state[0]~reg0.CLK
+clock => state[1]~reg0.CLK
+newState[0] <= newState[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+newState[1] <= newState[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+MSI[0] => Equal0.IN3
+MSI[0] => Equal1.IN3
+MSI[0] => Mux0.IN4
+MSI[0] => Decoder0.IN1
+MSI[1] => Equal0.IN2
+MSI[1] => Equal1.IN2
+MSI[1] => Mux0.IN3
+MSI[1] => Decoder0.IN0
+
+
+|SnoopingMSI|memoria:mem
+clock => ~NO_FANOUT~
+bus[0] => ~NO_FANOUT~
+bus[1] => ~NO_FANOUT~
+bus[2] => ~NO_FANOUT~
+bus[3] => ~NO_FANOUT~
+bus[4] => memory.RADDR
+bus[4] => memory.WADDR
+bus[5] => memory.RADDR1
+bus[5] => memory.WADDR1
+bus[6] => memory.RADDR2
+bus[6] => memory.WADDR2
+bus[7] => Equal0.IN31
+bus[7] => Equal1.IN0
+bus[8] => Equal0.IN30
+bus[8] => Equal1.IN31
+memOut[0] <= memOut[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+memOut[1] <= memOut[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+memOut[2] <= memOut[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+memOut[3] <= memOut[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+memOut[4] <= <GND>
+memOut[5] <= <GND>
+memOut[6] <= <GND>
+memOut[7] <= <GND>
+memOut[8] <= <GND>
+
+
+|SnoopingMSI|bus:barramento
+clock => ~NO_FANOUT~
+processador1[0] => busOut.DATAB
+processador1[0] => Equal0.IN31
+processador1[1] => busOut.DATAB
+processador1[1] => Equal0.IN30
+processador1[2] => busOut.DATAB
+processador1[2] => Equal0.IN29
+processador1[3] => busOut.DATAB
+processador1[3] => Equal0.IN28
+processador1[4] => busOut.DATAB
+processador1[4] => Equal0.IN27
+processador1[5] => busOut.DATAB
+processador1[5] => Equal0.IN26
+processador1[6] => busOut.DATAB
+processador1[6] => Equal0.IN25
+processador1[7] => busOut.DATAB
+processador1[7] => Equal0.IN24
+processador1[8] => busOut.DATAB
+processador1[8] => Equal0.IN23
+processador2[0] => busOut.DATAB
+processador2[0] => Equal1.IN31
+processador2[1] => busOut.DATAB
+processador2[1] => Equal1.IN30
+processador2[2] => busOut.DATAB
+processador2[2] => Equal1.IN29
+processador2[3] => busOut.DATAB
+processador2[3] => Equal1.IN28
+processador2[4] => busOut.DATAB
+processador2[4] => Equal1.IN27
+processador2[5] => busOut.DATAB
+processador2[5] => Equal1.IN26
+processador2[6] => busOut.DATAB
+processador2[6] => Equal1.IN25
+processador2[7] => busOut.DATAB
+processador2[7] => Equal1.IN24
+processador2[8] => busOut.DATAB
+processador2[8] => Equal1.IN23
+processador3[0] => busOut.DATAB
+processador3[0] => Equal2.IN31
+processador3[1] => busOut.DATAB
+processador3[1] => Equal2.IN30
+processador3[2] => busOut.DATAB
+processador3[2] => Equal2.IN29
+processador3[3] => busOut.DATAB
+processador3[3] => Equal2.IN28
+processador3[4] => busOut.DATAB
+processador3[4] => Equal2.IN27
+processador3[5] => busOut.DATAB
+processador3[5] => Equal2.IN26
+processador3[6] => busOut.DATAB
+processador3[6] => Equal2.IN25
+processador3[7] => busOut.DATAB
+processador3[7] => Equal2.IN24
+processador3[8] => busOut.DATAB
+processador3[8] => Equal2.IN23
+memory[0] => busOut.DATAA
+memory[1] => busOut.DATAA
+memory[2] => busOut.DATAA
+memory[3] => busOut.DATAA
+memory[4] => busOut.DATAA
+memory[5] => busOut.DATAA
+memory[6] => busOut.DATAA
+memory[7] => busOut.DATAA
+memory[8] => busOut.DATAA
+busOut[0] <= busOut.DB_MAX_OUTPUT_PORT_TYPE
+busOut[1] <= busOut.DB_MAX_OUTPUT_PORT_TYPE
+busOut[2] <= busOut.DB_MAX_OUTPUT_PORT_TYPE
+busOut[3] <= busOut.DB_MAX_OUTPUT_PORT_TYPE
+busOut[4] <= busOut.DB_MAX_OUTPUT_PORT_TYPE
+busOut[5] <= busOut.DB_MAX_OUTPUT_PORT_TYPE
+busOut[6] <= busOut.DB_MAX_OUTPUT_PORT_TYPE
+busOut[7] <= busOut.DB_MAX_OUTPUT_PORT_TYPE
+busOut[8] <= busOut.DB_MAX_OUTPUT_PORT_TYPE
+
+

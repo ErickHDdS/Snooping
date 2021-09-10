@@ -1,4 +1,4 @@
-module snoopingMSI(clock, instruction, cache1, cache2, cache3);	
+module SnoopingMSI(clock, instruction, cache1, cache2, cache3);	
 	input clock;
 	input [6:0] instruction;
 	output [5:0] cache1;

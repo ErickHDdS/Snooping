@@ -20,7 +20,7 @@ module processador(clock, instruction, busWires, cache);
 		localparam read  		= 1'b0; 
 		localparam write 		= 1'b1;
 		
-		reg [1:0] newState, mensage, action, state;
+		wire [1:0] newState, mensage, action, state;
 		
 		initial
 		begin
