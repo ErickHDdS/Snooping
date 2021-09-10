@@ -13,9 +13,9 @@ module memoria(clock, bus, memOut);
   reg [6:0] memory [0:6];
 
   always @(bus)
-	  if(state == 0) 			// readMiss
+	  if(state == 0) 							// readMiss
 			memOut <= memory[tag][3:0];
-     else if(state == 1)	// writeBack
+     else if(state == 1)					// writeBack
 			memory[tag][3:0] <= data;
 
 endmodule

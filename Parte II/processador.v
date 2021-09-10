@@ -27,8 +27,7 @@ module processador(clock, instruction, busWires, cache);
 			// inicializar alguns valores 
 		end
 		
-		// desenvolver a logica de write e read para cada condicao do snooping
-
+		// desenvolver a logica do snooping
 	MaquinaEmissora maqE(clock, newState, state, instruction);
 	MaquinaReceptora maqR(clock, newState, state, instruction);
 endmodule
