@@ -13,6 +13,12 @@ module memoria(clock, bus, memOut);
 
   reg [6:0] memory [0:6];
 
+  initial
+  begin
+  // inicializar a memoria
+  // tags e dados
+  end
+  
   always @(bus)
 	  if(state == 0) 							// readMiss
 			memOut <= memory[tag][3:0];
