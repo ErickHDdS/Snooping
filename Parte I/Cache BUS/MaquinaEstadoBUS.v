@@ -13,7 +13,7 @@ module MaquinaEstadoBUS(clock, newState, MSI);
 	localparam write_miss  = 2'b01;
 	localparam invalidate  = 2'b10;
 	
-	// Mensagens do processador
+	// Mensagens de controle
 	localparam ReadMissForThisBlock     = 2'b00;
 	localparam CPUReadMiss   				= 2'b01;
 	localparam WriteMissForThisBlock    = 2'b10;

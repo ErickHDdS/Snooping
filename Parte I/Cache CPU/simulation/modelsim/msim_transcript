@@ -20,9 +20,36 @@
 vsim work.MaquinaEstadoCPU
 # vsim work.MaquinaEstadoCPU 
 # Loading work.MaquinaEstadoCPU
-do {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/simulation/modelsim/MaquinaEstadoCPU.do}
+do {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache CPU/simulation/modelsim/wave.do}
 # .main_pane.wave.interior.cs.body.pw.wf
-# 1
+# ** Error: /MaquinaEstadoCPU/clock already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache CPU\simulation\modelsim\wave.do line 50
+# ** Error: /MaquinaEstadoCPU/clock already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache CPU\simulation\modelsim\wave.do line 51
+# ** Error: /MaquinaEstadoCPU/MSI already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache CPU\simulation\modelsim\wave.do line 52
+# ** Error: /MaquinaEstadoCPU/clock already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache CPU\simulation\modelsim\wave.do line 53
+# ** Error: /MaquinaEstadoCPU/MSI already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache CPU\simulation\modelsim\wave.do line 54
+# ** Error: /MaquinaEstadoCPU/clock already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache CPU\simulation\modelsim\wave.do line 55
+# ** Error: /MaquinaEstadoCPU/MSI already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache CPU\simulation\modelsim\wave.do line 56
 # 1
 run
 # CPU write | Place write miss on bus
@@ -33,42 +60,60 @@ run
 run
 # CPU write miss | Place write miss on bus
 # CPU read hit
+restart -f
+force -freeze sim:/MaquinaEstadoCPU/MSI 00 0
+add wave -position 1  sim:/MaquinaEstadoCPU/MSI
+run
+# CPU read| Place read miss on bus
+# CPU read miss| Place read miss on bus
+force -freeze sim:/MaquinaEstadoCPU/MSI 11 0
+run
+# CPU write | Place invalidate on bus
+# CPU write hit
 run
 # CPU write hit
-# CPU read miss | Write-back block | Place read miss on bus
-run
-# CPU write miss | Place write miss on bus
-# CPU read hit
+# CPU write hit
 run
 # CPU write hit
-# CPU read miss | Write-back block | Place read miss on bus
+# CPU write hit
+restart -f
+wave create -driver freeze -pattern clock -initialvalue HiZ -period 100ps -dutycycle 50 -starttime 0ps -endtime 10000ps sim:/MaquinaEstadoCPU/clock
+add wave -position 1 -format Logic -height 17 -editable 2 Edit:/MaquinaEstadoCPU/clock
+force -freeze sim:/MaquinaEstadoCPU/MSI 00 0
 run
-# CPU write miss | Place write miss on bus
-# CPU read hit
+# CPU read| Place read miss on bus
+run
+# CPU read miss| Place read miss on bus
+# CPU read miss| Place read miss on bus
+force -freeze sim:/MaquinaEstadoCPU/MSI 11 0
+run
+# CPU write | Place invalidate on bus
+# CPU write hit
+restart -f
+force -freeze sim:/MaquinaEstadoCPU/MSI 00 0
+run
+run
+# CPU read| Place read miss on bus
+run
+# CPU read miss| Place read miss on bus
+force -freeze sim:/MaquinaEstadoCPU/MSI 11 0
+run
+# CPU write | Place invalidate on bus
+add wave -position 2  sim:/MaquinaEstadoCPU/MSI
 run
 # CPU write hit
-# CPU read miss | Write-back block | Place read miss on bus
-run
-# CPU write miss | Place write miss on bus
-# CPU read hit
 run
 # CPU write hit
-# CPU read miss | Write-back block | Place read miss on bus
+add wave -position 0 -format Logic -height 17 -editable 2 Edit:/MaquinaEstadoCPU/clock
+add wave -position 1 -autoscale 1 -color {Orange Red} -format Literal -height 17 sim:/MaquinaEstadoCPU/MSI
+force -freeze sim:/MaquinaEstadoCPU/MSI 01 0
 run
-# CPU write miss | Place write miss on bus
-# CPU read hit
+# CPU write miss | Write-back cache block | Place write miss on bus 
 run
-# CPU write hit
-# CPU read miss | Write-back block | Place read miss on bus
-run
-# CPU write miss | Place write miss on bus
-# CPU read hit
+force -freeze sim:/MaquinaEstadoCPU/MSI 11 0
 run
 # CPU write hit
-# CPU read miss | Write-back block | Place read miss on bus
+force -freeze sim:/MaquinaEstadoCPU/MSI 01 0
 run
-# CPU write miss | Place write miss on bus
-# CPU read hit
 run
-# CPU write hit
-# CPU read miss | Write-back block | Place read miss on bus
+# CPU write miss | Write-back cache block | Place write miss on bus 

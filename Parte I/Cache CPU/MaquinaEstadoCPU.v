@@ -116,7 +116,7 @@ module MaquinaEstadoCPU(clock, newState, MSI);
 						end
 					write_hit:
 						begin
-							state <= shared;
+							state <= exclusive;
 							newState <= write_hit;
 							mensage <= PlaceInvalidateOnBus;
 							action <= EmptyAction;

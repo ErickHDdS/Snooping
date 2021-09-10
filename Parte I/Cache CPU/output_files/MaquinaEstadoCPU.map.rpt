@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MaquinaEstadoCPU
-Thu Sep 09 22:50:43 2021
+Fri Sep 10 11:54:28 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,8 +15,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |MaquinaEstadoCPU|state
   9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
  12. Elapsed Time Per Partition
  13. Analysis & Synthesis Messages
 
@@ -44,7 +44,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 09 22:50:43 2021           ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 10 11:54:28 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MaquinaEstadoCPU                                ;
 ; Top-level Entity Name              ; MaquinaEstadoCPU                                ;
@@ -223,10 +223,19 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------+
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
-; state.exclusive                       ; Lost fanout        ;
 ; state.shared                          ; Lost fanout        ;
+; state.exclusive                       ; Lost fanout        ;
 ; Total Number of Removed Registers = 2 ;                    ;
 +---------------------------------------+--------------------+
+
+
++-----------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                 ;
++---------------+--------------------+----------------------------------------+
+; Register name ; Reason for Removal ; Registers Removed due to This Register ;
++---------------+--------------------+----------------------------------------+
+; state.shared  ; Lost Fanouts       ; state.exclusive                        ;
++---------------+--------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -244,15 +253,6 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MaquinaEstadoCPU|Selector0 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -268,7 +268,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Sep 09 22:50:43 2021
+    Info: Processing started: Fri Sep 10 11:54:27 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MaquinaEstadoCPU -c MaquinaEstadoCPU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file maquinaestadocpu.v
@@ -285,8 +285,8 @@ Info (21057): Implemented 8 device resources after synthesis - the final resourc
     Info (21061): Implemented 3 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4595 megabytes
-    Info: Processing ended: Thu Sep 09 22:50:43 2021
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Fri Sep 10 11:54:28 2021
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

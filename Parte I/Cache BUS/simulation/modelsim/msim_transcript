@@ -20,3 +20,144 @@
 vsim work.MaquinaEstadoBUS
 # vsim work.MaquinaEstadoBUS 
 # Loading work.MaquinaEstadoBUS
+do {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/simulation/modelsim/MaquinaEstadoBUS.do}
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Error: /MaquinaEstadoBUS/clock already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache BUS\simulation\modelsim\MaquinaEstadoBUS.do line 48
+# ** Error: /MaquinaEstadoBUS/clock already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache BUS\simulation\modelsim\MaquinaEstadoBUS.do line 49
+# ** Error: /MaquinaEstadoBUS/MSI already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache BUS\simulation\modelsim\MaquinaEstadoBUS.do line 50
+# 1
+# ** Error: /MaquinaEstadoBUS/clock already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache BUS\simulation\modelsim\MaquinaEstadoBUS.do line 52
+# 1
+run
+# Write-back block; abort memory access
+# Write miss for this block
+force -freeze sim:/MaquinaEstadoBUS/MSI 00 0
+restart -f
+force -freeze sim:/MaquinaEstadoBUS/MSI 00 0
+run
+# Write-back block; abort memory access
+# CPU read miss
+# CPU read miss
+# CPU read miss
+add wave -position 1  sim:/MaquinaEstadoBUS/MSI
+force -freeze sim:/MaquinaEstadoBUS/MSI 00 0
+run
+# CPU read miss
+# CPU read miss
+# CPU read miss
+# CPU read miss
+force -freeze sim:/MaquinaEstadoBUS/MSI 01 0
+run
+# Write miss for this block
+# Break key hit 
+restart -f
+force -freeze sim:/MaquinaEstadoBUS/MSI 00 0
+run
+# Write-back block; abort memory access
+# CPU read miss
+run
+# CPU read miss
+# CPU read miss
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 10000ps sim:/MaquinaEstadoBUS/clock
+add wave -position 0 -format Logic -height 17 -editable 2 Edit:/MaquinaEstadoBUS/clock
+restart -f
+force -freeze sim:/MaquinaEstadoBUS/MSI 00 0
+run
+# Write-back block; abort memory access
+run
+# CPU read miss
+# CPU read miss
+force -freeze sim:/MaquinaEstadoBUS/MSI 01 0
+run
+# Write miss for this block
+run
+restart -f
+wave create -driver freeze -pattern clock -initialvalue 0 -period 50ps -dutycycle 50 -starttime 0ps -endtime 10000ps sim:/MaquinaEstadoBUS/clock
+add wave -position 0 -format Logic -height 17 -editable 2 Edit:/MaquinaEstadoBUS/clock
+force -freeze sim:/MaquinaEstadoBUS/MSI 00 0
+run
+# Write-back block; abort memory access
+# CPU read miss
+run
+# CPU read miss
+# CPU read miss
+do {C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/simulation/modelsim/MaquinaEstadoBUS.do}
+# .main_pane.wave.interior.cs.body.pw.wf
+# ** Error: /MaquinaEstadoBUS/clock already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache BUS\simulation\modelsim\MaquinaEstadoBUS.do line 48
+# ** Error: /MaquinaEstadoBUS/clock already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache BUS\simulation\modelsim\MaquinaEstadoBUS.do line 49
+# ** Error: /MaquinaEstadoBUS/MSI already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache BUS\simulation\modelsim\MaquinaEstadoBUS.do line 50
+# 1
+# ** Error: /MaquinaEstadoBUS/clock already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# Executing ONERROR command at macro C:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache BUS\simulation\modelsim\MaquinaEstadoBUS.do line 52
+# 1
+force -freeze sim:/MaquinaEstadoBUS/MSI 00 0
+add wave -position 1  sim:/MaquinaEstadoBUS/MSI
+restart -f
+force -freeze sim:/MaquinaEstadoBUS/MSI 00 0
+run
+# Write-back block; abort memory access
+# CPU read miss
+run
+# CPU read miss
+# CPU read miss
+# CPU read miss
+force -freeze sim:/MaquinaEstadoBUS/MSI 01 0
+run
+# Write miss for this block
+force -freeze sim:/MaquinaEstadoBUS/state 10 0
+force -freeze sim:/MaquinaEstadoBUS/MSI 10 0
+run
+# Invalidate for this block
+# Invalidate for this block
+run
+# Invalidate for this block
+# Invalidate for this block
+run
+# Invalidate for this block
+# Invalidate for this block
+restart -f
+force -freeze sim:/MaquinaEstadoBUS/MSI 00 0
+run
+# Write-back block; abort memory access
+# CPU read miss
+# CPU read miss
+run
+# CPU read miss
+# CPU read miss
+force -freeze sim:/MaquinaEstadoBUS/MSI 10 0
+run
+# Invalidate for this block
+force -freeze sim:/MaquinaEstadoBUS/state 01 0
+run
+force -freeze sim:/MaquinaEstadoBUS/MSI 01 0
+run
+# Write-back block; abort memory access
+# Write-back block; abort memory access
+restart -f
+force -freeze sim:/MaquinaEstadoBUS/MSI 01 0
+run
+# Write-back block; abort memory access
+run

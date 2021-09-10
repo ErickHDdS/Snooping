@@ -9,7 +9,7 @@ vMaquinaEstadoBUS
 In5Ca;XM<DconjHa8<k2i41
 V0<>VHGm4XmU<mdLTUBYMY3
 Z1 dC:\Users\erick\OneDrive\Documentos\GitHub\Repositorios\LAOC II\Pratica IV\Snooping\Parte I\Cache BUS\simulation\modelsim
-w1631062877
+w1631287273
 8C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v
 FC:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v
 L0 1
@@ -17,7 +17,7 @@ OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1631238811.977000
+!s108 1631287289.181000
 !s107 C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS|C:/Users/erick/OneDrive/Documentos/GitHub/Repositorios/LAOC II/Pratica IV/Snooping/Parte I/Cache BUS/MaquinaEstadoBUS.v|
 !s101 -O0

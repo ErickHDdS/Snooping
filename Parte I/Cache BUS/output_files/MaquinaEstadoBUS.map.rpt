@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MaquinaEstadoBUS
-Thu Sep 09 22:53:24 2021
+Fri Sep 10 12:21:20 2021
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -45,7 +45,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 09 22:53:24 2021           ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 10 12:21:20 2021           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MaquinaEstadoBUS                                ;
 ; Top-level Entity Name              ; MaquinaEstadoBUS                                ;
@@ -280,7 +280,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Sep 09 22:53:23 2021
+    Info: Processing started: Fri Sep 10 12:21:19 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MaquinaEstadoBUS -c MaquinaEstadoBUS
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file maquinaestadobus.v
@@ -303,7 +303,7 @@ Info (21057): Implemented 5 device resources after synthesis - the final resourc
     Info (21059): Implemented 2 output pins
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 4595 megabytes
-    Info: Processing ended: Thu Sep 09 22:53:24 2021
+    Info: Processing ended: Fri Sep 10 12:21:20 2021
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
